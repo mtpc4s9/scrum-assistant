@@ -11,18 +11,18 @@ This sub-skill provides comprehensive, BABOK-aligned structured guidelines for d
 
 ## 1. Operating Modes for AI Agent
 
-When Chàng triggers this technique, the agent **MUST** operate in one of the following three distinct modes. Determine the mode based on Chàng's prompt:
+When the user triggers this technique, the agent **MUST** operate in one of the following three distinct modes. Determine the mode based on the user's prompt:
 
-*   **Mode A — Generation from Scratch:** Chàng provides a gaming/lottery feature description, compliance PRD, or business requirement, and you generate the complete User Story list, Card narratives, and Gherkin ACs.
-*   **Mode B — Refinement & Review:** Chàng provides an existing User Story, and you evaluate it against the **INVEST** quality framework, highlighting gaps and providing a revised, iGaming-ready version.
-*   **Mode C — Elicitation of Acceptance Criteria:** Chàng has a stable User Story card but needs detailed, testable Gherkin-style Acceptance Criteria.
+*   **Mode A — Generation from Scratch:** The user provides a gaming/lottery feature description, compliance PRD, or business requirement, and you generate the complete User Story list, Card narratives, and Gherkin ACs.
+*   **Mode B — Refinement & Review:** The user provides an existing User Story, and you evaluate it against the **INVEST** quality framework, highlighting gaps and providing a revised, iGaming-ready version.
+*   **Mode C — Elicitation of Acceptance Criteria:** The user has a stable User Story card but needs detailed, testable Gherkin-style Acceptance Criteria.
 
 ---
 
 ## 2. Core Operating Rules & Instructions
 
 ### Step 1: Input Elicitation (Zero Guessing Rule)
-Before drafting a User Story, you **MUST** ensure the following inputs are available in the context. If any are missing, **STOP** and ask Chàng to provide them (never assume business logic):
+Before drafting a User Story, you **MUST** ensure the following inputs are available in the context. If any are missing, **STOP** and ask the user to provide them (never assume business logic):
 1.  **Target Persona/User Role:** (e.g., "Registered Lottery Player", "Risk Officer", "Game Engine Client").
 2.  **User Goal:** What specific system action does the persona want to perform?
 3.  **Business Value:** What benefit or regulatory compliance goal does it deliver?
