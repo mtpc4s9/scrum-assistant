@@ -32,18 +32,18 @@ For specific activities, trigger the corresponding sub-skill:
 
 | Request Category | Target Action | Sub-Skill Path |
 |:---|:---|:---|
-| **Business Analysis** | Crafting User Stories & BDD ACs | `skills/ba-user-story-craft/SKILL.md` |
-| **Business Analysis** | Requirements Elicitation Techniques | `skills/ba-requirements-elicitation/SKILL.md` |
-| **Business Analysis** | Change Request Impact Analysis | `skills/ba-impact-analysis/SKILL.md` |
-| **Scrum Ceremonies** | Sprint Planning & Goal Setting | `skills/sm-sprint-planning/SKILL.md` |
-| **Scrum Ceremonies** | Daily Standup & Blockers Facilitation | `skills/sm-daily-sync/SKILL.md` |
-| **Scrum Ceremonies** | Sprint Retrospective Formats | `skills/sm-retrospective/SKILL.md` |
-| **Scrum Ceremonies** | Backlog Refinement & Grooming | `skills/sm-refinement/SKILL.md` |
-| **Scrum Ceremonies** | Sprint Review & Done Definition | `skills/sm-sprint-review/SKILL.md` |
-| **Scrum Operations** | Team Capacity Planning | `skills/sm-capacity-planning/SKILL.md` |
-| **Scrum Operations** | Velocity Analysis & Predictability | `skills/sm-velocity-review/SKILL.md` |
-| **Scrum Operations** | Impediment & Blocker Management | `skills/sm-impediment-log/SKILL.md` |
-| **Scrum Operations** | Stakeholder Comms & Sync Updates | `skills/sm-stakeholder-update/SKILL.md` |
+| **Business Analysis** | Crafting User Stories & BDD ACs | `skills/po-ba/ba-user-story-craft/SKILL.md` |
+| **Business Analysis** | Requirements Elicitation Techniques | `skills/po-ba/ba-requirements-elicitation/SKILL.md` |
+| **Business Analysis** | Change Request Impact Analysis | `skills/po-ba/ba-impact-analysis/SKILL.md` |
+| **Scrum Operations** | Team Capacity Planning | `skills/sm-ops/sm-capacity-planning/SKILL.md` |
+| **Scrum Operations** | Velocity Analysis & Predictability | `skills/sm-ops/sm-velocity-review/SKILL.md` |
+| **Scrum Operations** | Impediment & Blocker Management | `skills/sm-ops/sm-impediment-log/SKILL.md` |
+| **Scrum Operations** | Stakeholder Comms & Sync Updates | `skills/sm-ops/sm-stakeholder-update/SKILL.md` |
+| **Sprint Ceremonies** | Sprint Planning & Goal Setting | `skills/ceremonies/sprint-planning/SKILL.md` |
+| **Sprint Ceremonies** | Daily Standup & Blockers Facilitation | `skills/ceremonies/daily-sync/SKILL.md` |
+| **Sprint Ceremonies** | Backlog Refinement & Grooming | `skills/ceremonies/refinement/SKILL.md` |
+| **Sprint Ceremonies** | Sprint Review & Done Definition | `skills/ceremonies/sprint-review/SKILL.md` |
+| **Sprint Ceremonies** | Sprint Retrospective Formats | `skills/ceremonies/retrospective/SKILL.md` |
 | **Quality & Audit** | User Story INVEST Quality Audit | `skills/audit-user-story/SKILL.md` |
 | **Quality & Audit** | Sprint Health & WIP Audit | `skills/audit-sprint-health/SKILL.md` |
 | **Quality & Audit** | Backlog Hygiene & Priorities Audit | `skills/audit-backlog/SKILL.md` |
@@ -52,4 +52,4 @@ For specific activities, trigger the corresponding sub-skill:
 
 ## Domain Context Reference
 For detailed knowledge concerning domain stakeholders (Compliance, Platform PM, Dev Leads), key dictionary terms (RNG, PAM, Ledger Atomicity), and common system flows (Spin-Wager loops), refer to:
-*   [igaming-context.md](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/refs/igaming-context.md)
+*   [igaming-context.md](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/igaming-context.md)

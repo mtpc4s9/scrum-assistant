@@ -22,28 +22,44 @@ In the high-stakes world of iGaming, standard agile coaching and generic busines
 ```text
 scrum-assistant/
 │
-├── SKILL.md                    # Primary Router & Entrypoint for Antigravity
-├── ARCHITECTURE.md             # Folder layout guide & system boundary map
-├── README.md                   # This repository homepage
+├── SKILL.md                        # Primary Router & Entrypoint for Antigravity
+├── ARCHITECTURE.md                 # Folder layout guide & system boundary map
+├── README.md                       # This repository homepage
+├── .gitignore                      # Git tracking exemptions (hides private refs/)
 │
-├── refs/                       # Foundational references & Domain Context (Git Ignored)
-│   ├── jd-senior-ba-sm.md      # Dual BA/SM responsibilities
-│   ├── business-analyst.md     # BABOK framework notes
-│   ├── scrum-master.md         # Scrum ceremonies guide
-│   └── igaming-context.md      # iGaming & Lottery domain dictionary
+├── refs/                           # [PRIVATE - GIT IGNORED] Private developer scratchpad
+│   ├── jd-senior-ba-sm.md          # Dual BA/SM responsibilities
+│   ├── business-analyst.md         # BABOK framework notes
+│   └── scrum-master.md             # Scrum ceremonies guide
 │
-└── skills/                     # Active sub-skills & technical templates
+├── reference/                      # [PACKAGED - GIT TRACKED] Tri thức domain (Domain knowledge)
+│   ├── igaming-context.md          # iGaming & Lottery domain context & dictionary
+│   └── jd-guidelines.md            # Standard JD context mapping
+│
+└── skills/                         # Active sub-skills & technical templates
     │
-    ├── ba-user-story-craft/
-    │   └── SKILL.md            # INVEST & BDD Gherkin story creation
+    ├── po-ba/                      # [BA/PO Accountabilities]
+    │   ├── ba-user-story-craft/
+    │   │   └── SKILL.md            # INVEST & BDD Gherkin story creation
+    │   ├── ba-requirements-elicitation/
+    │   │   └── SKILL.md            # Stakeholder interviews & JAD workshops
+    │   └── ba-impact-analysis/
+    │       └── SKILL.md            # Change Request (CR) systems impact assessment
     │
-    ├── ba-requirements-elicitation/
-    │   └── SKILL.md            # Stakeholder interviews & JAD workshops
+    ├── sm-ops/                     # [SM Operations & Metrics] (Upcoming)
+    │   ├── sm-capacity-planning/
+    │   ├── sm-velocity-review/
+    │   ├── sm-impediment-log/
+    │   └── sm-stakeholder-update/
     │
-    ├── ba-impact-analysis/
-    │   └── SKILL.md            # Change Request (CR) systems impact assessment
+    ├── ceremonies/                 # [Sprint Events & Outputs] (Upcoming)
+    │   ├── sprint-planning/
+    │   ├── daily-sync/
+    │   ├── refinement/
+    │   ├── sprint-review/
+    │   └── retrospective/
     │
-    └── templates/                  # Document & Modeling templates (Lottery ready)
+    └── templates/                  # Shared Document & Modeling templates
         ├── user-story-bdd.md       # Standard BDD story structure
         ├── sprint-goal-canvas.md   # Scrum Master planning canvas
         ├── game-rules-math-sheet.md # Lottery rules, prize tiers & RTP spec sheet
@@ -56,9 +72,9 @@ scrum-assistant/
 
 | Sub-Skill Area | Purpose | Key Trigger Keywords |
 |:---|:---|:---|
-| 📝 **[ba-user-story-craft](skills/ba-user-story-craft/SKILL.md)** | Crafting INVEST stories & Gherkin BDD AC | `user story`, `Gherkin`, `BDD`, `acceptance criteria` |
-| 🗣️ **[ba-requirements-elicitation](skills/ba-requirements-elicitation/SKILL.md)** | Elicitation checklists for Compliance & Tech Leads | `elicitation`, `interview`, `JAD`, `workshop` |
-| 🛡️ **[ba-impact-analysis](skills/ba-impact-analysis/SKILL.md)** | Change Request systems & compliance audits | `impact assessment`, `change request`, `CR`, `compliance` |
+| 📝 **[ba-user-story-craft](skills/po-ba/ba-user-story-craft/SKILL.md)** | Crafting INVEST stories & Gherkin BDD AC | `user story`, `Gherkin`, `BDD`, `acceptance criteria` |
+| 🗣️ **[ba-requirements-elicitation](skills/po-ba/ba-requirements-elicitation/SKILL.md)** | Elicitation checklists for Compliance & Tech Leads | `elicitation`, `interview`, `JAD`, `workshop` |
+| 🛡️ **[ba-impact-analysis](skills/po-ba/ba-impact-analysis/SKILL.md)** | Change Request systems & compliance audits | `impact assessment`, `change request`, `CR`, `compliance` |
 
 ---
 

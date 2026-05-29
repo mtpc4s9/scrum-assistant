@@ -9,35 +9,61 @@ This document outlines the file layout and directory organization of the `scrum-
 ```text
 scrum-assistant/
 │
-├── SKILL.md                    # Root Router (Entry point for Antigravity)
-├── ARCHITECTURE.md             # This file (System layout map)
+├── SKILL.md                        # Root Router (Entry point for Antigravity)
+├── ARCHITECTURE.md                 # This file (System layout map)
+├── README.md                       # Repository homepage (GitHub optimized)
+├── .gitignore                      # Git tracking exemptions (hides private refs/)
 │
-├── refs/                       # Foundational references & Domain Context
-│   ├── jd-senior-ba-sm.md      # Dual BA/SM responsibilities
-│   ├── business-analyst.md     # BABOK framework notes
-│   ├── scrum-master.md         # Scrum ceremonies guide
-│   ├── technical-writer.md     # Documentation style guidelines
-│   ├── structure.md            # Generic reference layout
-│   ├── techniques.md           # Core Scrum/BA techniques list
-│   ├── techniques.xlsx         # Planning spreadsheet
-│   └── igaming-context.md      # iGaming & Lottery domain dictionary
+├── refs/                           # [PRIVATE - GIT IGNORED] Private developer scratchpad
+│   ├── jd-senior-ba-sm.md          # Senior BA/SM job responsibilities
+│   ├── business-analyst.md         # BABOK framework notes
+│   ├── scrum-master.md             # Scrum ceremonies guide
+│   ├── technical-writer.md         # Documentation style guidelines
+│   ├── structure.md                # Generic reference layout
+│   ├── techniques.md               # Core Scrum/BA techniques list
+│   └── techniques.xlsx             # Planning spreadsheet
 │
-└── skills/                     # Active sub-skills & templates
+├── reference/                      # [PACKAGED - GIT TRACKED] Tri thức domain (Domain knowledge)
+│   ├── igaming-context.md          # iGaming & Lottery domain context & dictionary
+│   └── jd-guidelines.md            # Standard JD context mapping
+│
+└── skills/                         # Active sub-skills & templates
     │
-    ├── ba-user-story-craft/
-    │   └── SKILL.md            # INVEST & BDD Gherkin story creation
+    ├── po-ba/                      # [BA/PO Accountabilities]
+    │   ├── ba-user-story-craft/
+    │   │   └── SKILL.md            # INVEST & BDD Gherkin story creation
+    │   ├── ba-requirements-elicitation/
+    │   │   └── SKILL.md            # Stakeholder mapping & elicitation workshops
+    │   └── ba-impact-analysis/
+    │       └── SKILL.md            # Change Request systems & compliance gating
     │
-    ├── ba-requirements-elicitation/
-    │   └── SKILL.md            # Stakeholder mapping & elicitation workshops
+    ├── sm-ops/                     # [SM Operations & Metrics] (Upcoming)
+    │   ├── sm-capacity-planning/
+    │   │   └── SKILL.md            # Team capacity calculations & ranges
+    │   ├── sm-velocity-review/
+    │   │   └── SKILL.md            # Sprint predictability & velocity checks
+    │   ├── sm-impediment-log/
+    │   │   └── SKILL.md            # Blocker tracking & escalation logs
+    │   └── sm-stakeholder-update/
+    │       └── SKILL.md            # Stakeholder comms & sync drafts
     │
-    ├── ba-impact-analysis/
-    │   └── SKILL.md            # Change Request systems & compliance gating
+    ├── ceremonies/                 # [Sprint Events & Outputs] (Upcoming)
+    │   ├── sprint-planning/
+    │   │   └── SKILL.md            # Sprint goal & backlog commitments (Goal Canvas)
+    │   ├── daily-sync/
+    │   │   └── SKILL.md            # Daily Standup facilitation & blocker logs
+    │   ├── refinement/
+    │   │   └── SKILL.md            # Backlog refinement, grooming & estimation
+    │   ├── sprint-review/
+    │   │   └── SKILL.md            # Product demo, DoD gating & feedback loop
+    │   └── retrospective/
+    │       └── SKILL.md            # Sprint retro facilitation (4Ls/OODA formats)
     │
-    └── templates/                  # Document & Modeling templates (Lottery ready)
+    └── templates/                  # Shared Document & Modeling templates
         ├── user-story-bdd.md       # Standard BDD story structure
         ├── sprint-goal-canvas.md   # Scrum Master planning canvas
-        ├── game-rules-math-sheet.md # [NEW] Lottery prize & RTP template
-        └── third-party-integration-matrix.md # [NEW] Vendor API integration matrix
+        ├── game-rules-math-sheet.md # Lottery rules, prize tiers & RTP spec sheet
+        └── third-party-integration-matrix.md # API connectivity matrix (Kambi, MoMo, Crypto)
 ```
 
 ---
@@ -48,11 +74,16 @@ scrum-assistant/
 *   **SKILL.md:** Acts as the primary router. When the AI agent encounters a generic BA/SM request, this file directs the agent to load the precise sub-skill path using `view_file`.
 *   **ARCHITECTURE.md:** Provides directory visibility, helping the agent comprehend where templates and supporting context files are located.
 
-### 2.2 Domain References (`/refs/`)
-*   Contains long-term, read-only documentation. The agent references these files to match Chàng's specific business parameters (e.g. alignment with the Senior JD or local lottery compliance terminologies in `igaming-context.md`).
+### 2.2 Private References (`/refs/`) vs Public Domain References (`/reference/`)
+*   **`/refs/`:** Contains long-term, read-only internal developer notes. Git ignored to protect company privacy.
+*   **`/reference/`:** Contains packaged domain context (`igaming-context.md`) to guide the AI agent during live daily work.
 
 ### 2.3 Active Sub-Skills (`/skills/`)
-*   Functional units containing executable guidelines and specific templates. Every active directory has its own `SKILL.md` with a unique YAML `name` tag contract, facilitating independent dynamic loading by Antigravity.
+*   Functional units containing executable guidelines and specific templates. Grouped logically by:
+    *   `po-ba/`: Day-to-day requirements, stories, and change scoping.
+    *   `sm-ops/`: Metrics, capacity, blockers, and stakeholder comms.
+    *   `ceremonies/`: Event-driven sprint rituals producing tangible output logs.
 
 ### 2.4 Shared Templates (`/skills/templates/`)
 *   Ready-to-use Markdown templates. Sub-skills draw from this layer to generate copy-paste ready technical content for Jira tickets, compliance sheets, or meeting outputs.
+
