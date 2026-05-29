@@ -41,7 +41,7 @@ Follow the standard three-part Agile card structure:
 
 ### Step 3: Apply the INVEST Framework
 Self-evaluate the drafted story against the 6 INVEST quality criteria. For detailed definitions and splitting strategies, consult:
-*   [INVEST Criteria Details](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/skills/po-ba/ba-user-stories/references/invest-criteria.md)
+*   [INVEST Criteria Details](references/invest-criteria.md)
 
 ### Step 4: Generate Given-When-Then Acceptance Criteria
 Each User Story **MUST** have a minimum of **three (3) distinct Gherkin scenarios**:
@@ -57,7 +57,7 @@ Use the strict Gherkin format:
 - **Then** [the testable system ledger updates, UI changes, or audit logs]
 - **And** [additional minor outcomes, if applicable]
 ```
-*   *Detailed Quality Checklist:* [Acceptance Criteria Quality Checklist](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/skills/po-ba/ba-user-stories/checklists/quality-checklist.md)
+*   *Detailed Quality Checklist:* [Acceptance Criteria Quality Checklist](checklists/quality-checklist.md)
 
 ---
 
@@ -66,17 +66,17 @@ Use the strict Gherkin format:
 When writing stories in this domain, you **MUST** ensure the following rules are incorporated into the Business Rules and Acceptance Criteria:
 
 1.  **Ledger Atomicity (Transaction Lock):** Real-money wagers and payouts must be atomic. Write Gherkin steps to show balance locking, database row locks, and ledger status writes. Refer to:
-    *   [iGaming Wallet Context](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/igaming-context.md)
+    *   [iGaming Wallet Context](../../../../reference/igaming-context.md)
 2.  **Regulatory & Limit Gating:** Incorporate Geofencing coordinates and Responsible Gaming limit checks (deposits, wagers, loss limits) directly into preconditions (`Given`).
 3.  **Game Rules & RTP Conformity:** Ensure lottery ticket prices and win distributions match the paytable hit frequencies. Refer to:
-    *   [Lottery Rules & RTP Template](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/game-rules-math-sheet.md)
+    *   [Lottery Rules & RTP Template](../../../../reference/game-rules-math-sheet.md)
 4.  **Integration SLA and Failover:** Scenarios must document retry and rollback logic when Sportbook (Kambi), Casino (Pragmatic), or webhooks (MoMo, Crypto) timeout. Refer to:
-    *   [3rd Party Integration Matrix](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/third-party-integration-matrix.md)
+    *   [3rd Party Integration Matrix](../../../../reference/third-party-integration-matrix.md)
 
 ---
 
 ## 4. Reference Material & Supporting Assets
 
-*   **Templates:** Use the pre-structured [Agile User Story Specification Template](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/skills/po-ba/ba-user-stories/templates/user-story-specification.md) to format your final deliverable.
-*   **Production Examples:** Read [High-Fidelity User Story Examples](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/skills/po-ba/ba-user-stories/references/examples.md) to review industry-standard stories.
-*   **Quality Checklist:** Review the [Quality Self-Checklist](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/skills/po-ba/ba-user-stories/checklists/quality-checklist.md) before final submission.
+*   **Templates:** Use the pre-structured [Agile User Story Specification Template](templates/user-story-specification.md) to format your final deliverable.
+*   **Production Examples:** Read [High-Fidelity User Story Examples](references/examples.md) to review industry-standard stories.
+*   **Quality Checklist:** Review the [Quality Self-Checklist](checklists/quality-checklist.md) before final submission.
