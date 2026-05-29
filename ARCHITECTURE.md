@@ -14,15 +14,6 @@ scrum-assistant/
 ├── README.md                       # Repository homepage (GitHub optimized)
 ├── .gitignore                      # Git tracking exemptions (hides private refs/)
 │
-├── refs/                           # [PRIVATE - GIT IGNORED] Private developer scratchpad
-│   ├── jd-senior-ba-sm.md          # Senior BA/SM job responsibilities
-│   ├── business-analyst.md         # BABOK framework notes
-│   ├── scrum-master.md             # Scrum ceremonies guide
-│   ├── technical-writer.md         # Documentation style guidelines
-│   ├── structure.md                # Generic reference layout
-│   ├── techniques.md               # Core Scrum/BA techniques list
-│   └── techniques.xlsx             # Planning spreadsheet
-│
 ├── reference/                      # [PACKAGED - GIT TRACKED] Tri thức domain (Domain knowledge)
 │   ├── igaming-context.md          # iGaming & Lottery domain context & dictionary
 │   └── jd-guidelines.md            # Standard JD context mapping
@@ -86,4 +77,3 @@ scrum-assistant/
 
 ### 2.4 Shared Templates (`/skills/templates/`)
 *   Ready-to-use Markdown templates. Sub-skills draw from this layer to generate copy-paste ready technical content for Jira tickets, compliance sheets, or meeting outputs.
-

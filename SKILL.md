@@ -32,7 +32,7 @@ For specific activities, trigger the corresponding sub-skill:
 
 | Request Category | Target Action | Sub-Skill Path |
 |:---|:---|:---|
-| **Business Analysis** | Crafting User Stories & BDD ACs | `skills/po-ba/ba-user-story-craft/SKILL.md` |
+| **Business Analysis** | Crafting User Stories & BDD ACs | `skills/po-ba/ba-user-stories/SKILL.md` |
 | **Business Analysis** | Requirements Elicitation Techniques | `skills/po-ba/ba-requirements-elicitation/SKILL.md` |
 | **Business Analysis** | Change Request Impact Analysis | `skills/po-ba/ba-impact-analysis/SKILL.md` |
 | **Scrum Operations** | Team Capacity Planning | `skills/sm-ops/sm-capacity-planning/SKILL.md` |

@@ -39,7 +39,7 @@ scrum-assistant/
 └── skills/                         # Active sub-skills & technical templates
     │
     ├── po-ba/                      # [BA/PO Accountabilities]
-    │   ├── ba-user-story-craft/
+    │   ├── ba-user-stories/
     │   │   └── SKILL.md            # INVEST & BDD Gherkin story creation
     │   ├── ba-requirements-elicitation/
     │   │   └── SKILL.md            # Stakeholder interviews & JAD workshops
@@ -72,7 +72,7 @@ scrum-assistant/
 
 | Sub-Skill Area | Purpose | Key Trigger Keywords |
 |:---|:---|:---|
-| 📝 **[ba-user-story-craft](skills/po-ba/ba-user-story-craft/SKILL.md)** | Crafting INVEST stories & Gherkin BDD AC | `user story`, `Gherkin`, `BDD`, `acceptance criteria` |
+| 📝 **[ba-user-stories](skills/po-ba/ba-user-stories/SKILL.md)** | Crafting INVEST stories & Gherkin BDD AC | `user story`, `Gherkin`, `BDD`, `acceptance criteria` |
 | 🗣️ **[ba-requirements-elicitation](skills/po-ba/ba-requirements-elicitation/SKILL.md)** | Elicitation checklists for Compliance & Tech Leads | `elicitation`, `interview`, `JAD`, `workshop` |
 | 🛡️ **[ba-impact-analysis](skills/po-ba/ba-impact-analysis/SKILL.md)** | Change Request systems & compliance audits | `impact assessment`, `change request`, `CR`, `compliance` |
 
