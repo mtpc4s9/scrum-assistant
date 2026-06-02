@@ -27,10 +27,13 @@ scrum-assistant/
     │   ├── SKILL.md                # Visioning (Backbone Step 1)
     │   ├── checklists/
     │   │   └── input-readiness.md  # Quality gate checklist
+    │   ├── references/
+    │   │   └── lean-business-model-canvas-guide.md # Lean BMC guide
     │   └── templates/
     │       ├── elevator-pitch.md
     │       ├── initial-stakeholder-map.md
-    │       └── product-vision-board.md
+    │       ├── product-vision-board.md
+    │       └── product-vision-deck.md  # Presentation slides for BoD/C-level
     ├── step-02-goal-setting/
     │   ├── SKILL.md                # Goal Setting (Backbone Step 2)
     │   ├── checklists/
