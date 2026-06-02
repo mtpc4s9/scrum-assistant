@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "product-discovery/question-library.json",
+  "version": "1.0.0",
+  "description": "Starter library of contextual elicitation questions keyed by domain, adapted for enterprise, higher education, ERP systems, and general digital products. Adapt wording to context — these are seeds, not scripts.",
+
+  "feature_request": [
+    "What business problem are we solving — and who feels the pain most?",
+    "Which KPI is impacted if we don't build this?",
+    "What does success look like 3 months after launch?",
+    "Why is this solution preferred over alternatives?"
+  ],
+
+  "higher_education_systems": [
+    "Which specific student information system (SIS) is the system-of-record (e.g., iSAMS, PowerSchool)?",
+    "How does student, staff, or grade data synchronize between iSAMS/PowerSchool and Toddle/LMS (real-time API or scheduled batch)?",
+    "What is the source of truth for student enrolment statuses when conflict arises?",
+    "Are there specific academic scheduling constraints, multi-campus divisions, or curriculum frameworks (e.g., IB, Cambridge) to accommodate?",
+    "How are grade locks, report card approvals, and transcript generation handled currently?"
+  ],
+
+  "erp_integration_odoo": [
+    "Which Odoo version is under scope (e.g., v13, v15, v18) and are we using Odoo Enterprise or Community?",
+    "What custom modules or third-party integrations (e.g., Shopify, custom shipping, external CRM) does this Odoo backend interact with?",
+    "What is the exact workflow for stock adjustments, product catalog synchronization, or multi-warehouse replenishment?",
+    "How are finance and automated invoicing synced with local accounting or tax regulations?",
+    "Who is the system owner for core ERP master data (products, customers, vendors)?"
+  ],
+
+  "data_governance": [
+    "What is the system-of-record and downstream systems for this dataset?",
+    "What specific data validation, data lineage, or master data management (MDM) rules apply?",
+    "What are the data privacy requirements (e.g., GDPR, PDPA, local cyber-security regulations) regarding PII (Personally Identifiable Information)?",
+    "How are data conflicts or duplicate customer/student profiles resolved and audited?",
+    "Are there historical data retention, archival, or purging policies?"
+  ],
+
+  "iGaming": [
+    "What are the regulatory licensing constraints (e.g., MGA, Curacao, PAGCOR, local jurisdictions) and compliance controls (e.g., Responsible Gaming limits, self-exclusion, AML/KYC checks)?",
+    "How is the player wallet architecture integrated (e.g., single seamless wallet vs. product-specific wallets like sportsbook, casino, live dealer)?",
+    "What is the transaction volume and concurrency threshold during peak event windows (e.g., live sports matches, weekend slots)?",
+    "How are game provider integrations (via game aggregator APIs) structured, and what is the latency SLA requirement for round-resolutions?",
+    "What are the player retention KPIs, and is there an automated real-time loyalty, bonusing, or cashback engine involved?"
+  ],
+
+  "online_lottery": [
+    "What is the specific draw mechanism (certified RNG vs. mechanical draw) and how is the draw results distribution audited and verified?",
+    "How are ticket purchase limits, transaction security, and fraud detection (e.g., duplicate tickets, syndicate operations) governed?",
+    "What is the transaction scalability requirement for ticket processing during high-jackpot, pre-draw countdown hours?",
+    "Who owns the payout and tax reconciliation workflow (e.g., auto-payouts for low-tier prizes vs. manual claims/verification for jackpot tier)?",
+    "What channels are supported for ticket sales (web, mobile app, retail agent terminals) and is real-time inventory management required for physical/digital ticket reconciliation?"
+  ],
+
+  "reporting": [
+    "Who uses the report, and how frequently?",
+    "What decision depends on this report?",
+    "What is difficult with the current reporting process?",
+    "Would a live dashboard serve the user better than a static export?"
+  ],
+
+  "payment": [
+    "What happens if payment fails mid-checkout?",
+    "How are duplicate transactions prevented?",
+    "Who owns the refund flow — Finance, CS, or automated?",
+    "What payment methods are in scope (card, wallet, bank transfer, instalment)?"
+  ],
+
+  "approval_process": [
+    "Who approves — single approver or multi-level?",
+    "What conditions trigger approval routing?",
+    "Can approval be delegated when the approver is on leave?",
+    "What's the SLA for approval decisions?"
+  ],
+
+  "notification_system": [
+    "What events trigger notifications?",
+    "Which channels are required — push, SMS, email, in-app?",
+    "What happens if delivery fails — retry, fallback channel, or drop?",
+    "Are there rate limits or quiet-hours per user?"
+  ],
+
+  "data_export": [
+    "Who needs the export, and how often?",
+    "What fields are mandatory vs optional?",
+    "Is the export sensitive — PII, financial, or grade data?",
+    "Would a dashboard or API serve the user better than a file download?"
+  ],
+
+  "integration": [
+    "Which external system is the integration target?",
+    "Is it real-time (sync API), near-real-time (webhook), or batch?",
+    "What's the fallback when the external system is down?",
+    "Who owns the integration contract — our team or the partner?"
+  ],
+
+  "ai_feature": [
+    "What specific learner or operator problem will AI solve?",
+    "What does 'good AI output' look like — and who judges it?",
+    "What happens when the AI is wrong — who catches it and how?",
+    "Is AI the only solution, or could better search/filtering achieve the same outcome?",
+    "What data does the AI need, and is it available and clean?"
+  ]
+}

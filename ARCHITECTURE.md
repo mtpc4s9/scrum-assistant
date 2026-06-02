@@ -24,7 +24,13 @@ scrum-assistant/
 └── skills/                         # Executable guidelines & sub-skills
     │
     ├── step-01-visioning/
-    │   └── SKILL.md                # Visioning (Backbone Step 1)
+    │   ├── SKILL.md                # Visioning (Backbone Step 1)
+    │   ├── checklists/
+    │   │   └── input-readiness.md  # Quality gate checklist
+    │   └── templates/
+    │       ├── elevator-pitch.md
+    │       ├── initial-stakeholder-map.md
+    │       └── product-vision-board.md
     ├── step-02-goal-setting/
     │   └── SKILL.md                # Goal Setting (Backbone Step 2)
     ├── step-03-goal-prioritization/
@@ -62,6 +68,11 @@ scrum-assistant/
     │   └── SKILL.md                # Sprint hygiene, WIP limits, & metric checks
     ├── audit-backlog/
     │   └── SKILL.md                # Backlog readiness & prioritization audits
+    │
+    ├── shared
+    │    ├── product-discovery/
+    │
+    │    ├── user-story-writing/
     │
     └── templates/                  # Shared document & canvas templates
         ├── agile_a4_sprint_report.md  # A4 print-ready summary report
