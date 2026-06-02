@@ -3,13 +3,6 @@ name: stakeholder-update
 description: >
   Drafts a clear, concise stakeholder update — translating Sprint progress, risks, and delivery forecasts into business language that non-technical stakeholders can act on.
   Triggered when the user says: "write a stakeholder update", "draft a status update", "send an update to the business", "prepare a progress report", "what do I tell the steering committee", "draft the weekly update", "communicate sprint progress", or in Vietnamese: "viết báo cáo tiến độ", "báo cáo stakeholder", "cập nhật trạng thái", "gửi update cho bên liên quan", "chuẩn bị báo cáo tiến độ", "báo cáo tiến độ".
-license: MIT
-compatibility: Works with or without a project management MCP. When ADO or Jira MCP is connected, reads Sprint state and work item progress automatically. Falls back to a conversational briefing.
-metadata:
-  ceremony: Sprint
-  perspective: Product Owner / Scrum Master
-  scrum_guide_ref: https://scrumguides.org/scrum-guide.html
-  version: "1.0.0"
 ---
 
 # Stakeholder Update

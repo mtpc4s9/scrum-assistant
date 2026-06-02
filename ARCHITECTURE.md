@@ -32,7 +32,14 @@ scrum-assistant/
     │       ├── initial-stakeholder-map.md
     │       └── product-vision-board.md
     ├── step-02-goal-setting/
-    │   └── SKILL.md                # Goal Setting (Backbone Step 2)
+    │   ├── SKILL.md                # Goal Setting (Backbone Step 2)
+    │   ├── checklists/
+    │   │   └── input-readiness.md  # Quality gate checklist
+    │   ├── references/
+    │   │   └── impact-mapping-guide.md # On-demand reference guide
+    │   └── templates/
+    │       ├── impact-map.md
+    │       └── product-goal-statement.md
     ├── step-03-goal-prioritization/
     │   └── SKILL.md                # Goal Prioritization (Backbone Step 3)
     ├── step-04-backlog-creation/
