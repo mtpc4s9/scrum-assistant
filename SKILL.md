@@ -40,16 +40,21 @@ For specific activities, trigger the corresponding sub-skill:
 | **Scrum Operations** | Impediment & Blocker Management | `skills/sm-ops/sm-impediment-log/SKILL.md` |
 | **Scrum Operations** | Stakeholder Comms & Sync Updates | `skills/sm-ops/sm-stakeholder-update/SKILL.md` |
 | **Sprint Ceremonies** | Sprint Planning & Goal Setting | `skills/ceremonies/sprint-planning/SKILL.md` |
-| **Sprint Ceremonies** | Daily Standup & Blockers Facilitation | `skills/ceremonies/daily-sync/SKILL.md` |
+| **Sprint Ceremonies** | Daily Standup & Blockers Facilitation | `skills/ceremonies/daily-scrum/SKILL.md` |
 | **Sprint Ceremonies** | Backlog Refinement & Grooming | `skills/ceremonies/refinement/SKILL.md` |
 | **Sprint Ceremonies** | Sprint Review & Done Definition | `skills/ceremonies/sprint-review/SKILL.md` |
-| **Sprint Ceremonies** | Sprint Retrospective Formats | `skills/ceremonies/retrospective/SKILL.md` |
+| **Sprint Ceremonies** | Sprint Retrospective Formats | `skills/ceremonies/sprint-retrospective/SKILL.md` |
 | **Quality & Audit** | User Story INVEST Quality Audit | `skills/audit-user-story/SKILL.md` |
 | **Quality & Audit** | Sprint Health & WIP Audit | `skills/audit-sprint-health/SKILL.md` |
 | **Quality & Audit** | Backlog Hygiene & Priorities Audit | `skills/audit-backlog/SKILL.md` |
 
 ---
 
-## Domain Context Reference
-For detailed knowledge concerning domain stakeholders (Compliance, Platform PM, Dev Leads), key dictionary terms (RNG, PAM, Ledger Atomicity), and common system flows (Spin-Wager loops), refer to:
-*   [igaming-context.md](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/igaming-context.md)
+## Reference Files
+
+| Reference | Path | Purpose |
+|-----------|------|---------|
+| **Scrum Flow Backbone** | `reference/scrum-flow-backbone.md` | Master flow: steps 1–12, inputs, outputs, techniques, iGaming overlays |
+| **iGaming Domain Context** | `reference/igaming-context.md` | Domain stakeholders, RNG, PAM, Ledger, regulatory context |
+| **2020 Scrum Guide** | `refs/2020-Scrum-Guide-US.md` | Primary Scrum authority (git-ignored, local only) |
+| **Scrum Guide Expanded** | https://scrumexpansion.org/scrum-guide-expanded/ | SGEP v2026.1 — expanded context and complementary theory |
