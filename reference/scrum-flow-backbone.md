@@ -379,16 +379,18 @@ This backbone maps to the following skills in this toolkit:
 
 | Step(s) | Skill File |
 |---------|------------|
-| Step 1–3 | `../skills/po-ba/product-vision/SKILL.md` *(to be created)* |
-| Step 4 | `../skills/po-ba/ba-user-stories/SKILL.md` |
-| Step 5 | `../skills/po-ba/release-planning/SKILL.md` *(to be created)* |
-| Step 6 | `../skills/sm-ops/working-agreements/SKILL.md` *(to be created)* |
-| Step 7 | `../skills/ceremonies/sprint-planning/SKILL.md` *(to be created)* |
-| Step 8 | `../skills/ceremonies/daily-scrum/SKILL.md` *(to be created)* |
-| Step 9 | `../skills/sm-ops/impediment-management/SKILL.md` *(to be created)* |
-| Step 10 | `../skills/ceremonies/refinement/SKILL.md` *(to be created)* |
-| Step 11 | `../skills/ceremonies/sprint-review/SKILL.md` *(to be created)* |
-| Step 12 | `../skills/ceremonies/sprint-retrospective/SKILL.md` *(to be created)* |
+| Step 1 | `../skills/step-01-visioning/SKILL.md` |
+| Step 2 | `../skills/step-02-goal-setting/SKILL.md` |
+| Step 3 | `../skills/step-03-goal-prioritization/SKILL.md` |
+| Step 4 | `../skills/step-04-backlog-creation/SKILL.md` |
+| Step 5 | `../skills/step-05-release-planning/SKILL.md` |
+| Step 6 | `../skills/step-06-standards-setup/SKILL.md` |
+| Step 7 | `../skills/step-07-sprint-planning/SKILL.md` |
+| Step 8 | `../skills/step-08-daily-scrum/SKILL.md` |
+| Step 9 | `../skills/step-09-sprint-execution/SKILL.md` |
+| Step 10 | `../skills/step-10-refinement/SKILL.md` |
+| Step 11 | `../skills/step-11-sprint-review/SKILL.md` |
+| Step 12 | `../skills/step-12-sprint-retrospective/SKILL.md` |
 
 ---
 

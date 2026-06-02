@@ -28,22 +28,22 @@ A specialized skill bundle designed to act as a **Dual Senior Business Analyst &
 
 ## Sub-Skill Routing Reference
 
-For specific activities, trigger the corresponding sub-skill:
+For specific steps in the 12-step Scrum Flow, trigger the corresponding sub-skill:
 
-| Request Category | Target Action | Sub-Skill Path |
+| Step | Target Action | Sub-Skill Path |
 |:---|:---|:---|
-| **Business Analysis** | Crafting User Stories & BDD ACs | `skills/po-ba/ba-user-stories/SKILL.md` |
-| **Business Analysis** | Requirements Elicitation Techniques | `skills/po-ba/ba-requirements-elicitation/SKILL.md` |
-| **Business Analysis** | Change Request Impact Analysis | `skills/po-ba/ba-impact-analysis/SKILL.md` |
-| **Scrum Operations** | Team Capacity Planning | `skills/sm-ops/sm-capacity-planning/SKILL.md` |
-| **Scrum Operations** | Velocity Analysis & Predictability | `skills/sm-ops/sm-velocity-review/SKILL.md` |
-| **Scrum Operations** | Impediment & Blocker Management | `skills/sm-ops/sm-impediment-log/SKILL.md` |
-| **Scrum Operations** | Stakeholder Comms & Sync Updates | `skills/sm-ops/sm-stakeholder-update/SKILL.md` |
-| **Sprint Ceremonies** | Sprint Planning & Goal Setting | `skills/ceremonies/sprint-planning/SKILL.md` |
-| **Sprint Ceremonies** | Daily Standup & Blockers Facilitation | `skills/ceremonies/daily-scrum/SKILL.md` |
-| **Sprint Ceremonies** | Backlog Refinement & Grooming | `skills/ceremonies/refinement/SKILL.md` |
-| **Sprint Ceremonies** | Sprint Review & Done Definition | `skills/ceremonies/sprint-review/SKILL.md` |
-| **Sprint Ceremonies** | Sprint Retrospective Formats | `skills/ceremonies/sprint-retrospective/SKILL.md` |
+| **Step 1 — Visioning** | Product Vision Statement, Elevator Pitch, Vision Board | `skills/step-01-visioning/SKILL.md` |
+| **Step 2 — Goal Setting** | Product Goal definition, Impact Mapping | `skills/step-02-goal-setting/SKILL.md` |
+| **Step 3 — Goal Prioritization** | Cost of Delay, WSJF, MoSCoW prioritization | `skills/step-03-goal-prioritization/SKILL.md` |
+| **Step 4 — Backlog Creation** | Writing User Stories, Gherkin Acceptance Criteria, story mapping | `skills/step-04-backlog-creation/SKILL.md` |
+| **Step 5 — Release Planning** | Release Plan mapping, velocity forecasting | `skills/step-05-release-planning/SKILL.md` |
+| **Step 6 — Standards Setup** | Setup team agreements, DoR, and DoD | `skills/step-06-standards-setup/SKILL.md` |
+| **Step 7 — Sprint Planning** | Sprint Goal definition, PBI selection, task planning | `skills/step-07-sprint-planning/SKILL.md` |
+| **Step 8 — Daily Scrum** | Daily 15-minute sync, Walk the Board format | `skills/step-08-daily-scrum/SKILL.md` |
+| **Step 9 — Sprint Execution** | Increment delivery, impediment & blocker management | `skills/step-09-sprint-execution/SKILL.md` |
+| **Step 10 — Refinement** | Backlog grooming, story splitting, sizing, Three Amigos | `skills/step-10-refinement/SKILL.md` |
+| **Step 11 — Sprint Review** | Increment demonstration, feedback loops, backlog adaptation | `skills/step-11-sprint-review/SKILL.md` |
+| **Step 12 — Retrospective** | Actionable process improvements, team feedback retros | `skills/step-12-sprint-retrospective/SKILL.md` |
 | **Quality & Audit** | User Story INVEST Quality Audit | `skills/audit-user-story/SKILL.md` |
 | **Quality & Audit** | Sprint Health & WIP Audit | `skills/audit-sprint-health/SKILL.md` |
 | **Quality & Audit** | Backlog Hygiene & Priorities Audit | `skills/audit-backlog/SKILL.md` |

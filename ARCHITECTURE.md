@@ -13,8 +13,6 @@ scrum-assistant/
 │
 ├── SKILL.md                        # Root Router (Entry point for Antigravity discovery)
 ├── ARCHITECTURE.md                 # This file (System layout & mapping guide)
-├── README.md                       # Repository homepage (GitHub optimized)
-├── .gitignore                      # Git exemptions (hides private scratchpads like refs/)
 │
 ├── reference/                      # [PACKAGED - GIT TRACKED] Domain & Process references
 │   ├── scrum-flow-backbone.md          # Master 12-step flow guide (Backbone)
@@ -23,46 +21,40 @@ scrum-assistant/
 │   ├── third-party-integration-matrix.md # Reference template: connectivity matrix (MoMo, Kambi, etc.)
 │   └── jd-guidelines.md                # Standard role description context mapping
 │
-├── refs/                           # [PRIVATE - GIT IGNORED] Developer personal scratchpad
-│   └── (Private notes, raw draft logs, unformatted text files)
-│
 └── skills/                         # Executable guidelines & sub-skills
     │
-    ├── po-ba/                      # [PO/BA Accountabilities] - Initiative & Requirements
-    │   ├── product-vision/
-    │   │   └── SKILL.md            # Visioning & Goal Setting (Backbone Steps 1–3)
-    │   ├── ba-user-stories/
-    │   │   └── SKILL.md            # Backlog Creation & Story Writing (Backbone Step 4)
-    │   ├── release-planning/
-    │   │   └── SKILL.md            # Release mapping & velocity forecast (Backbone Step 5)
-    │   ├── ba-requirements-elicitation/
-    │   │   └── SKILL.md            # Elicitation workshops, user research, stakeholder maps
-    │   └── ba-impact-analysis/
-    │       └── SKILL.md            # Change Request impact & regulatory gating
-    │
-    ├── sm-ops/                     # [SM Operations] - Infrastructure & Performance
-    │   ├── working-agreements/
-    │   │   └── SKILL.md            # Team norms, DoR, and DoD setup (Backbone Step 6)
-    │   ├── impediment-management/
-    │   │   └── SKILL.md            # Blocker tracking & escalation logs (Backbone Step 9)
-    │   ├── sm-capacity-planning/
-    │   │   └── SKILL.md            # Sprint capacity calculations & ranges
-    │   ├── sm-velocity-review/
-    │   │   └── SKILL.md            # Sprint predictability & historical velocity analysis
-    │   └── sm-stakeholder-update/
-    │       └── SKILL.md            # Progress communication & stakeholder sync drafts
-    │
-    ├── ceremonies/                 # [Sprint Events & Artifacts] - Sprint Loop
-    │   ├── sprint-planning/
-    │   │   └── SKILL.md            # Sprint planning ritual & task breakdown (Backbone Step 7)
-    │   ├── daily-scrum/
-    │   │   └── SKILL.md            # 15-minute Daily sync & walk-the-board (Backbone Step 8)
-    │   ├── refinement/
-    │   │   └── SKILL.md            # Ongoing backlog grooming & story splitting (Backbone Step 10)
-    │   ├── sprint-review/
-    │   │   └── SKILL.md            # Live demo feedback & DoD inspection (Backbone Step 11)
-    │   └── sprint-retrospective/
-    │       └── SKILL.md            # Actionable continuous improvement (Backbone Step 12)
+    ├── step-01-visioning/
+    │   └── SKILL.md                # Visioning (Backbone Step 1)
+    ├── step-02-goal-setting/
+    │   └── SKILL.md                # Goal Setting (Backbone Step 2)
+    ├── step-03-goal-prioritization/
+    │   └── SKILL.md                # Goal Prioritization (Backbone Step 3)
+    ├── step-04-backlog-creation/
+    │   ├── SKILL.md                # Backlog Creation & Story Writing (Backbone Step 4)
+    │   ├── checklists/
+    │   │   └── quality-checklist.md
+    │   ├── references/
+    │   │   ├── examples.md
+    │   │   └── invest-criteria.md
+    │   └── templates/
+    │       ├── ac-template.md
+    │       └── user-story-specification.md
+    ├── step-05-release-planning/
+    │   └── SKILL.md                # Release Planning (Backbone Step 5)
+    ├── step-06-standards-setup/
+    │   └── SKILL.md                # Standards Setup (DoR/DoD/Norms) (Backbone Step 6)
+    ├── step-07-sprint-planning/
+    │   └── SKILL.md                # Sprint Planning (Backbone Step 7)
+    ├── step-08-daily-scrum/
+    │   └── SKILL.md                # Daily Scrum (Backbone Step 8)
+    ├── step-09-sprint-execution/
+    │   └── SKILL.md                # Sprint Execution & Impediment Management (Backbone Step 9)
+    ├── step-10-refinement/
+    │   └── SKILL.md                # Backlog Refinement (Backbone Step 10)
+    ├── step-11-sprint-review/
+    │   └── SKILL.md                # Sprint Review (Backbone Step 11)
+    ├── step-12-sprint-retrospective/
+    │   └── SKILL.md                # Sprint Retrospective (Backbone Step 12)
     │
     ├── audit-user-story/
     │   └── SKILL.md                # INVEST quality checks & story audits
@@ -86,18 +78,18 @@ The sub-skills directory structure corresponds directly to the step sequence def
 
 | Backbone Phase | Step | Action / Ceremony | Sub-Skill Path |
 | :--- | :--- | :--- | :--- |
-| **PHASE 0: Initiative** | Step 1 | Visioning | `skills/po-ba/product-vision/` |
-| | Step 2 | Goal Setting | `skills/po-ba/product-vision/` |
-| | Step 3 | Goal Prioritization | `skills/po-ba/product-vision/` |
-| | Step 4 | Product Backlog Creation | `skills/po-ba/ba-user-stories/` |
-| | Step 5 | Release Planning | `skills/po-ba/release-planning/` |
-| | Step 6 | Standards Setup (DoR/DoD/Norms) | `skills/sm-ops/working-agreements/` |
-| **PHASE 1: Sprint Loop** | Step 7 | Sprint Planning | `skills/ceremonies/sprint-planning/` |
-| | Step 8 | Daily Scrum | `skills/ceremonies/daily-scrum/` |
-| | Step 9 | Sprint Execution / Impediments | `skills/sm-ops/impediment-management/` |
-| | Step 10 | Backlog Refinement | `skills/ceremonies/refinement/` |
-| | Step 11 | Sprint Review | `skills/ceremonies/sprint-review/` |
-| | Step 12 | Sprint Retrospective | `skills/ceremonies/sprint-retrospective/` |
+| **PHASE 0: Initiative** | Step 1 | Visioning | `skills/step-01-visioning/` |
+| | Step 2 | Goal Setting | `skills/step-02-goal-setting/` |
+| | Step 3 | Goal Prioritization | `skills/step-03-goal-prioritization/` |
+| | Step 4 | Product Backlog Creation | `skills/step-04-backlog-creation/` |
+| | Step 5 | Release Planning | `skills/step-05-release-planning/` |
+| | Step 6 | Standards Setup (DoR/DoD/Norms) | `skills/step-06-standards-setup/` |
+| **PHASE 1: Sprint Loop** | Step 7 | Sprint Planning | `skills/step-07-sprint-planning/` |
+| | Step 8 | Daily Scrum | `skills/step-08-daily-scrum/` |
+| | Step 9 | Sprint Execution / Impediments | `skills/step-09-sprint-execution/` |
+| | Step 10 | Backlog Refinement | `skills/step-10-refinement/` |
+| | Step 11 | Sprint Review | `skills/step-11-sprint-review/` |
+| | Step 12 | Sprint Retrospective | `skills/step-12-sprint-retrospective/` |
 
 ---
 
@@ -120,3 +112,7 @@ To ensure portability and searchability across different user setups, follow the
 ### 3.4 Language and Tone Rule
 *   All file names and system documentation must be in **English**.
 *   Sub-skills (`SKILL.md` and related markdown files) must use professional English and remain free of personal pronouns or conversational exchanges.
+
+### 3.5 Folder Naming Convention Rule
+*   All step folders must follow the format `step-{NN}-{slug}`, where `{NN}` is a zero-padded two-digit number (e.g., `01`, `02`, `12`) and `{slug}` is the lowercase, hyphenated representation of the step name (e.g., `step-02-goal-setting`).
+*   When the user makes requests using natural language names (e.g., "Goal Setting"), the AI agent matches the request to the matching folder (e.g., `step-02-goal-setting`).

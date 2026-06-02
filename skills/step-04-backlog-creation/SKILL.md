@@ -66,12 +66,12 @@ Use the strict Gherkin format:
 When writing stories in this domain, you **MUST** ensure the following rules are incorporated into the Business Rules and Acceptance Criteria:
 
 1.  **Ledger Atomicity (Transaction Lock):** Real-money wagers and payouts must be atomic. Write Gherkin steps to show balance locking, database row locks, and ledger status writes. Refer to:
-    *   [iGaming Wallet Context](../../../../reference/igaming-context.md)
+    *   [iGaming Wallet Context](../../reference/igaming-context.md)
 2.  **Regulatory & Limit Gating:** Incorporate Geofencing coordinates and Responsible Gaming limit checks (deposits, wagers, loss limits) directly into preconditions (`Given`).
 3.  **Game Rules & RTP Conformity:** Ensure lottery ticket prices and win distributions match the paytable hit frequencies. Refer to:
-    *   [Lottery Rules & RTP Template](../../../../reference/game-rules-math-sheet.md)
+    *   [Lottery Rules & RTP Template](../../reference/game-rules-math-sheet.md)
 4.  **Integration SLA and Failover:** Scenarios must document retry and rollback logic when Sportbook (Kambi), Casino (Pragmatic), or webhooks (MoMo, Crypto) timeout. Refer to:
-    *   [3rd Party Integration Matrix](../../../../reference/third-party-integration-matrix.md)
+    *   [3rd Party Integration Matrix](../../reference/third-party-integration-matrix.md)
 
 ---
 
