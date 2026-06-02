@@ -71,8 +71,8 @@ scrum-assistant/
     │
     ├── shared
     │    ├── product-discovery/
-    │
     │    ├── user-story-writing/
+    │    └── stakeholder-update/
     │
     └── templates/                  # Shared document & canvas templates
         ├── agile_a4_sprint_report.md  # A4 print-ready summary report

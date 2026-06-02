@@ -23,4 +23,4 @@ When the user requests a Product Vision Board, execute the following reasoning s
 
 | 👥 TARGET GROUP | 💡 NEEDS | 📦 PRODUCT | 📈 BUSINESS VALUE |
 | :--- | :--- | :--- | :--- |
-| *[Agent: List 2-3 specific customer, user, or buyer segments]* | *[Agent: List 2-3 core problems or needs of the Target Group]* | *[Agent: List 3-5 key features or capabilities of the product]* | *[Agent: List 2-3 business goals for the organization, e.g., revenue, market share, compliance]* |
+| *[Agent: List 3-5 specific customer, user, or buyer segments]* | *[Agent: List 3-5 core problems or needs of the Target Group]* | *[Agent: List 3-5 key features or capabilities of the product]* | *[Agent: List 3-5 business goals for the organization, e.g., revenue, market share, compliance]* |

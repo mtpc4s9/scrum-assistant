@@ -17,7 +17,7 @@ All 5 criteria below must be marked as **MET** before proceeding. If any criteri
 ## Decision Logic & Rules
 
 *   **IF any criterion is [ ] NOT MET:**
-    *   **Action:** Terminate the standard execution flow. Call the Product Discovery skill located at [shared/product-discovery/SKILL.md](../../shared/product-discovery/SKILL.md) to interview the user (Chủ nhân) and gather missing details.
+    *   **Action:** Terminate the standard execution flow. Call the Product Discovery skill located at [shared/product-discovery/SKILL.md](../../shared/product-discovery/SKILL.md) to interview the user and gather missing details.
     *   **Rule:** Repeat the discovery cycle until all 5 checklist items are verified as `MET`.
 *   **IF all criteria are [x] MET:**
     *   **Action:** Proceed directly to Phase 2 (Domain Context Overlay).
