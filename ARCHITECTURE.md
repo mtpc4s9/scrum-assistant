@@ -65,7 +65,18 @@ scrum-assistant/
     │   └── templates/
     │       └── release-plan.md
     ├── step-06-standards-setup/
-    │   └── SKILL.md                # Standards Setup (DoR/DoD/Norms) (Backbone Step 6)
+    │   ├── SKILL.md                # Standards Setup (DoR · DoD · Working Agreements) (Backbone Step 6)
+    │   ├── checklists/
+    │   │   └── input-readiness.md  # Quality gate: Team composition, env, tooling, compliance baselines
+    │   ├── references/
+    │   │   ├── definition-of-ready-guide.md  # On-demand: 4 minimum needs of Ready + iGaming overlay
+    │   │   ├── definition-of-done-guide.md   # On-demand: SG2020 DoD standards + iGaming compliance layer
+    │   │   └── team-norm-guide.md            # On-demand: Working Agreements facilitation guide
+    │   └── templates/
+    │       ├── definition-of-ready.md         # [A] DoR checklist template
+    │       ├── definition-of-done.md          # [B] DoD checklist template
+    │       ├── team-norm.md                   # [C] Working Agreements core document
+    │       └── team-norm-presentation-deck.md # [D] PPTX-ready outline for team sign-off ceremony
     ├── step-07-sprint-planning/
     │   └── SKILL.md                # Sprint Planning (Backbone Step 7)
     ├── step-08-daily-scrum/

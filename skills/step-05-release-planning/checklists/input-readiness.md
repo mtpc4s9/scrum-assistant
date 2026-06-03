@@ -16,7 +16,7 @@ All 4 criteria below must be marked as **MET** before proceeding. If any criteri
 ## Decision Logic & Rules
 
 *   **IF the user demands a "Fixed Everything" plan (Fixed Date, Scope, and Cost):**
-    *   **Action:** Mark C3 as [ ] NOT MET. Socratic warning: *"Chủ nhân, việc cố định cả Ngày phát hành, Phạm vi và Chi phí vi phạm nguyên lý thực nghiệm của Scrum. Chúng ta cần chọn ưu tiên Cố định Ngày (ngày cố định, phạm vi linh hoạt) hoặc Cố định Phạm vi (phạm vi cố định, ngày linh hoạt). Chàng muốn chọn hướng đi nào?"*
+    *   **Action:** Mark C3 as [ ] NOT MET. Socratic warning: *"A 'Fixed Everything' plan (Fixed Scope, Fixed Date, Fixed Budget) violates Empirical Process Control and leads to Technical Debt. Please specify whether Date or Scope is your primary flexible constraint."*
 *   **IF any criterion is [ ] NOT MET:**
     *   **Action:** Suspend forecasting calculations. Ask clarifying questions to retrieve the missing metrics. If necessary, call [shared/product-discovery](../../shared/product-discovery/SKILL.md) to gather background.
 *   **IF all criteria are [x] MET:**
