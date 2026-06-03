@@ -1,8 +1,10 @@
 ---
-name: po-split-story
-description: Applies proven story splitting patterns to break an oversized user story or epic into sprint-sized, independently deliverable stories. Use when a Product Owner or developer says things like "this story is too big", "we need to split this", "this will not fit in a sprint", "break this epic down", "help me slice this story", or when a story fails the Small criterion in INVEST. Do not use for writing new stories from scratch — use po-create-user-story instead. Do not use for sprint planning or backlog prioritization.
+name: story-splitting
+description: >
+  Applies proven story splitting patterns to break an oversized user story or epic into sprint-sized, independently deliverable stories.
+  Triggered when the user says: "this story is too big", "we need to split this", "this will not fit in a sprint", "break this epic down", "help me slice this story", "fails INVEST", or in Vietnamese: "tách user story", "chia nhỏ story", "split story", "tách nhỏ công việc", "phân rã story".
 license: MIT
-compatibility: Works with or without a project management MCP. When ADO or Jira MCP is connected, fetches the story by ID and can create the split stories directly in the backlog. Falls back to a pasted story. Compatible with Claude Code, Cursor, GitHub Copilot, and any agentskills.io-compatible agent.
+compatibility: Works with or without a project management MCP. When ADO or Jira MCP is connected, fetches the story by ID and can create the split stories directly in the backlog. Falls back to a pasted story.
 metadata:
   ceremony: Backlog Refinement
   perspective: Product Owner / Developer
@@ -18,7 +20,7 @@ A story that cannot fit in one Sprint is a planning liability — it blocks comm
 
 ---
 
-## Tool detection
+## Tool Detection
 
 1. Check for active `mcp__azure-devops__*` tools → `$PM_TOOL = ado`
 2. Check for active `mcp__jira__*` tools → `$PM_TOOL = jira`
@@ -27,7 +29,7 @@ A story that cannot fit in one Sprint is a planning liability — it blocks comm
 
 ---
 
-## Step 1 — Fetch the story
+## Step 1 — Fetch the Story
 
 Ask: *"Which story needs splitting? Provide the ID or paste the content."*
 
@@ -39,7 +41,7 @@ If the item is an Epic, treat the whole Epic as the input. Store as `$STORY`.
 
 ---
 
-## Step 2 — Diagnose why it is too large
+## Step 2 — Diagnose Why It Is Too Large
 
 Before splitting, understand *what* makes it large. This determines which pattern fits best.
 
@@ -56,9 +58,9 @@ Ask yourself — and the PO if needed:
 
 ---
 
-## Step 3 — Apply the best-fit pattern
+## Step 3 — Apply the Best-Fit Pattern
 
-### Pattern 1 — Workflow steps
+### Pattern 1 — Workflow Steps
 Split the story at each step in the user's journey. Each step becomes its own story.
 
 ```
@@ -71,7 +73,7 @@ Split:
 → Receive a decision notification as a claimant
 ```
 
-### Pattern 2 — Business rule variations
+### Pattern 2 — Business Rule Variations
 Keep the happy path in one story. Each significant business rule variation becomes its own story.
 
 ```
@@ -83,7 +85,7 @@ Split:
 → Apply free-shipping thresholds to qualifying orders
 ```
 
-### Pattern 3 — Happy path / unhappy path
+### Pattern 3 — Happy Path / Unhappy Path
 Deliver the working case first. Error handling, edge cases, and validation follow as separate stories.
 
 ```
@@ -95,7 +97,7 @@ Split:
 → Handle export timeouts gracefully for large datasets [edge case]
 ```
 
-### Pattern 4 — Data variations
+### Pattern 4 — Data Variations
 Same operation, different data types or states.
 
 ```
@@ -107,7 +109,7 @@ Split:
 → Upload and preview spreadsheets
 ```
 
-### Pattern 5 — Interface / channel
+### Pattern 5 — Interface / Channel
 Deliver one channel first. Other channels follow as separate stories.
 
 ```
@@ -143,7 +145,7 @@ Split:
 → Generate the annual report with real-time refresh [optimised]
 ```
 
-### Pattern 8 — Deferred system integration
+### Pattern 8 — Deferred System Integration
 Replace the integration with a manual or stub step. Automate it as a follow-up story.
 
 ```
@@ -154,7 +156,7 @@ Split:
 → Sync approved claims to the accounting system via API [automation]
 ```
 
-### Pattern 9 — Cross-cutting concerns
+### Pattern 9 — Cross-Cutting Concerns
 Deliver core functionality first. Add notifications, audit logs, and validation as follow-up stories.
 
 ```
@@ -169,7 +171,7 @@ Split:
 
 ---
 
-## Step 4 — Present the split
+## Step 4 — Present the Split
 
 For each resulting story, produce a complete draft:
 
@@ -193,7 +195,7 @@ Then present the full set and ask: *"Does this split make sense? Any stories to 
 
 ---
 
-## Step 5 — Confirm and create
+## Step 5 — Confirm and Create
 
 After confirmation:
 

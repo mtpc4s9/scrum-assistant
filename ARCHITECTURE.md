@@ -15,11 +15,11 @@ scrum-assistant/
 ├── ARCHITECTURE.md                 # This file (System layout & mapping guide)
 │
 ├── reference/                      # [PACKAGED - GIT TRACKED] Domain & Process references
-│   ├── scrum-flow-backbone.md          # Master 12-step flow guide (Backbone)
-│   ├── igaming-context.md              # Domain terminology, RNG, PAM, regulatory context
-│   ├── game-rules-math-sheet.md        # Reference template: RTP, prize tier, lottery rules
-│   ├── third-party-integration-matrix.md # Reference template: connectivity matrix (MoMo, Kambi, etc.)
-│   └── jd-guidelines.md                # Standard role description context mapping
+│   ├── scrum-flow-backbone.md             # Master 12-step flow guide (Backbone)
+│   ├── igaming-context.md                 # Domain terminology, RNG, PAM, regulatory context
+│   ├── game-rules-math-sheet.md           # Reference template: RTP, prize tier, lottery rules
+│   ├── third-party-integration-matrix.md  # Reference template: connectivity matrix (MoMo, Kambi, etc.)
+│   └── jd-guidelines.md                   # Standard role description context mapping
 │
 └── skills/                         # Executable guidelines & sub-skills
     │
@@ -46,15 +46,16 @@ scrum-assistant/
     ├── step-03-goal-prioritization/
     │   └── SKILL.md                # Goal Prioritization (Backbone Step 3)
     ├── step-04-backlog-creation/
-    │   ├── SKILL.md                # Backlog Creation & Story Writing (Backbone Step 4)
+    │   ├── SKILL.md                # Backlog Creation & Roadmapping (Backbone Step 4)
     │   ├── checklists/
-    │   │   └── quality-checklist.md
+    │   │   └── deep-quality-gate.md # DEEP criteria quality gate checklist
     │   ├── references/
-    │   │   ├── examples.md
-    │   │   └── invest-criteria.md
+    │   │   ├── mrf-and-roadmapping-guide.md # On-demand roadmap guide
+    │   │   └── user-story-mapping-guide.md  # On-demand story map guide
     │   └── templates/
-    │       ├── ac-template.md
-    │       └── user-story-specification.md
+    │       ├── epic-feature-tree.md
+    │       ├── high-level-product-backlog.md
+    │       └── product-roadmap.md
     ├── step-05-release-planning/
     │   └── SKILL.md                # Release Planning (Backbone Step 5)
     ├── step-06-standards-setup/
@@ -82,7 +83,8 @@ scrum-assistant/
     ├── shared
     │    ├── product-discovery/
     │    ├── user-story-writing/
-    │    └── stakeholder-update/
+    │    ├── stakeholder-update/
+    │    └── story-splitting/
     │
     └── templates/                  # Shared document & canvas templates
         ├── agile_a4_sprint_report.md  # A4 print-ready summary report
