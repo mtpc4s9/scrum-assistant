@@ -57,7 +57,13 @@ scrum-assistant/
     │       ├── high-level-product-backlog.md
     │       └── product-roadmap.md
     ├── step-05-release-planning/
-    │   └── SKILL.md                # Release Planning (Backbone Step 5)
+    │   ├── SKILL.md                # Release Planning (Backbone Step 5)
+    │   ├── checklists/
+    │   │   └── input-readiness.md  # Quality gate checklist
+    │   ├── references/
+    │   │   └── release-forecasting-guide.md # On-demand forecasting guide
+    │   └── templates/
+    │       └── release-plan.md
     ├── step-06-standards-setup/
     │   └── SKILL.md                # Standards Setup (DoR/DoD/Norms) (Backbone Step 6)
     ├── step-07-sprint-planning/
