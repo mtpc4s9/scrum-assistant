@@ -40,17 +40,29 @@ When guiding the Scrum Team through Sprint Planning, the Agent MUST execute the 
 --------------------------------------------------------------------------------
 
 #### 4. Mathematical Engine & Formulas (Table 19.2 Reference)
-To calculate Net Available Effort-Hours per developer, the Agent must enforce the following equation:
+To calculate Net Available Effort-Hours per developer, the Agent must enforce the following equations:
 
-$$\text{Net Available Effort-Hours} = (\text{Days Available} - \text{PTO Days} - \text{Scrum Event Days}) \times \text{Net Hours/Day}$$
+$$\text{Gross Focus Hours} = (\text{Days Available} - \text{PTO Days} - \text{Holiday Days}) \times \text{Net Hours/Day} \times \text{Focus Factor (default 70\%)}$$
+$$\text{Net Available Effort-Hours} = \text{Gross Focus Hours} - \text{Ceremony Hours}$$
 
 Where:
-*   **Days Available:** Total working days in the Sprint (e.g., 10 days for a 2-week Sprint) minus any scheduled PTO days.
-*   **PTO Days:** Personal Time Off or public holidays.
-*   **Scrum Event Days:** Fractional days allocated to Sprint Planning, Daily Scrum, Review, Retrospective, and Refinement (e.g., 1.5 days total for a 2-week Sprint).
-*   **Net Hours/Day:** The actual hours per day a developer is available for core Sprint execution, excluding general organizational overhead (typically 6 hours out of an 8-hour workday).
+*   **Days Available:** Total working days in the Sprint (e.g., 10 days for a 2-week Sprint).
+*   **PTO Days:** Personal Time Off (vacation/sick).
+*   **Holiday Days:** Public holidays.
+*   **Net Hours/Day:** Standard daily hours (default 8 hours/day).
+*   **Focus Factor:** Empirical focus percentage (default 70% or 0.70) to account for daily non-Sprint interruptions.
+*   **Ceremony Hours:** Total overhead for Scrum events.
 
-$$\text{Total Team Capacity} = \sum (\text{Individual Net Available Effort-Hours})$$
+$$\text{Total Team Net Capacity} = \sum (\text{Individual Net Available Effort-Hours})$$
+
+##### Scrum Ceremony Overhead Reference Table
+| Ceremony | Duration / Frequency |
+| :--- | :--- |
+| **Sprint Planning** | 2–4 hours per Sprint |
+| **Daily Scrums** | 15 minutes (0.25 hrs) per working day |
+| **Sprint Review** | 1–2 hours per Sprint |
+| **Retrospective** | 1–2 hours per Sprint |
+| **Backlog Refinement** | 1–2 hours per Sprint |
 
 --------------------------------------------------------------------------------
 

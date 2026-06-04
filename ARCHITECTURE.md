@@ -82,7 +82,9 @@ scrum-assistant/
     │   ├── checklists/
     │   │   └── input-readiness.md  # Quality gate checklist
     │   ├── references/
-    │   │   └── one-part-planning-guide.md # On-demand: One-Part planning logic & Table 19.2/Figure 19.5 math
+    │   │   ├── capacity-planning-guide.md # On-demand: Capacity Planning equations, focus factor, & flags
+    │   │   ├── one-part-planning-guide.md # On-demand: One-Part planning logic & Table 19.2/Figure 19.5 math
+    │   │   └── velocity-review-guide.md   # On-demand: Velocity metrics, predictability rate, & coaching patterns
     │   └── templates/
     │       ├── sprint-planning.md                  # [A] Core Document (internal detailed plan)
     │       ├── sprint-planning-facilitation-deck.md # [B] SM Facilitation Deck (live SM tool)

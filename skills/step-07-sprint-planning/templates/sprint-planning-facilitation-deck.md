@@ -82,7 +82,25 @@ flowchart LR
 
 ---
 
-## SLIDE 4: Team Capacity Overview (Figure 19.5)
+## SLIDE 4: Historical Velocity Analysis
+*Reviewing recent Sprint performance to establish an empirical baseline for point commitment:*
+
+| Sprint | committed | Completed | Predictability |
+| :--- | :---: | :---: | :---: |
+| *[Agent: Sprint N-3]* | *[Committed]* pts | *[Completed]* pts | *[Completed/Committed]*% |
+| *[Agent: Sprint N-2]* | *[Committed]* pts | *[Completed]* pts | *[Completed/Committed]*% |
+| *[Agent: Sprint N-1]* | *[Committed]* pts | *[Completed]* pts | *[Completed/Committed]*% |
+
+*   **Average Velocity:** *[Agent: Avg Points]* points
+*   **Predictability Trend:** *[Agent: Stable / Declining / Improving]* (Avg: *[Predictability]*%)
+*   **Variability:** *[Agent: Low / Moderate / High]* (Std Dev: *[X]* pts)
+*   🎤 **Coaching Observation:** *[Agent: Insert relevant SM coaching pattern - e.g. stable, chronic overcommitment, or high variability]*
+
+🎤 *SM Facilitation Prompt: "Team, let's review our recent velocity. Remember, velocity is an empirical forecasting tool, not a measure of team productivity or a performance KPI. We use it as a guideline to prevent overcommitment. If our predictability is below 80%, we should discuss why in the retrospective and plan more conservatively."*
+
+---
+
+## SLIDE 5: Team Capacity Overview (Figure 19.5)
 *To plan realistically and maintain a sustainable pace, we allocate our total Sprint hours across five key categories:*
 
 ```mermaid
@@ -98,23 +116,25 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 5: Capacity Calculation (Table 19.2 Aggregate)
+## SLIDE 6: Capacity Calculation (Table 19.2 Aggregate)
 *Team-wide aggregate math to determine total effort-hours available for PBI task work:*
 
 | Capacity Metric | Team Total (Aggregate) |
 | :--- | :---: |
 | **Gross Developer Days Available** *(e.g., [N] Devs x 10 days)* | *[Agent: Total Days]* |
 | ➖ Planned PTO & Holidays (Days) | *[Agent: Total PTO Days]* |
-| ➖ Scrum Events & Refinement overhead (Days) | *[Agent: Total Event Days]* |
-| **Net Working Days Available** | **[Agent: Net Days]** |
-| ✖️ Net Effort-Hours per Day *(typically 6 hrs/day)* | *[Agent: Net Hours/Day]* |
+| **Days Available for Focus Capacity** | **[Agent: Net Days]** |
+| ✖️ Focus Hours per Day *(8 hrs/day x Focus Factor 70% = 5.6 hrs/day)* | **5.6 hours/day** |
+| **Gross Focus Hours Baseline** | **[Agent: Net Days x 5.6]** hours |
+| ➖ Scrum Events & Refinement overhead (Ceremony Hours) | *[Agent: Ceremony Hours]* |
 | **🎯 NET AVAILABLE EFFORT-HOURS (Team Total)** | **[Agent: Total Effort-Hours]** |
+| **Recommended Story Point Commitment Range** *(0.85x to 1.00x)* | **[Agent: Range Floor] - [Agent: Range Ceiling]** points |
 
-🎤 *SM Facilitation Prompt: "We have a total of [Total Effort-Hours] net effort-hours available for Sprint execution tasks. Let's use this number as our ceiling for the One-Part Planning loop."*
+🎤 *SM Facilitation Prompt: "We have a total of [Total Effort-Hours] net effort-hours available for active Sprint execution. Based on our point productivity, this maps to a recommended commitment range of [Range Floor] to [Range Ceiling] story points. Let's use this capacity boundary to guide our selection loop."*
 
 ---
 
-## SLIDE 6: Topic 2: WHAT can be done this Sprint?
+## SLIDE 7: Topic 2: WHAT can be done this Sprint?
 *Evaluating the highest priority Product Backlog Items (PBIs) matching our Sprint Goal:*
 
 *   **PBI 1:** *[Agent: User Story Story-1]* (*[Size]* pts) - Meets DoR: **Yes**
@@ -129,7 +149,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 7: Topic 3: HOW will the work get done?
+## SLIDE 8: Topic 3: HOW will the work get done?
 *Executing the One-Part Planning Loop: Select -> Task Out -> Deduct Hours -> Repeat.*
 
 *   **PBI #1: [PBI Name]**
@@ -147,7 +167,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 8: Commitment & Definition of Done (DoD)
+## SLIDE 9: Commitment & Definition of Done (DoD)
 *Confirming the plan and aligning on quality standards:*
 
 *   **Definition of Done (DoD) Agreement:**
@@ -163,7 +183,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 9: Sprint Review Invitation
+## SLIDE 10: Sprint Review Invitation
 *Sharing our commitment and inviting collaboration at the end of the Sprint:*
 
 *   **What will be inspected:**

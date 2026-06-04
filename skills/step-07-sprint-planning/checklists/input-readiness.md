@@ -15,14 +15,17 @@ If any criterion is missing, the Assistant MUST suspend execution and prompt the
 | **C2** | **Team Capacity & Capabilities** | Is the specific availability (e.g., public holidays, personal time off, training days) of the Developers for this exact Sprint clearly defined? | [ ] MET <br> [ ] NOT MET |
 | **C3** | **Historical or Forecasted Velocity** | Is the Scrum Team's historical velocity (or a capacity-based forecasted velocity for new teams) provided to establish a realistic baseline? | [ ] MET <br> [ ] NOT MET |
 | **C4** | **Initial Sprint Goal** | Has the Product Owner proposed an initial business objective (the "WHY") for the upcoming Sprint to guide PBI selection? | [ ] MET <br> [ ] NOT MET |
+| **C5** | **Velocity Data Quality Check** | Does the historical velocity data cover at least 3 completed Sprints? (If not, proceed with developer-days/effort-hours only, without converting to story points). | [ ] MET <br> [ ] NOT MET |
 
 ---
 
 ## Decision Logic & Rules
 
-*   **IF any criterion is [ ] NOT MET:**
+*   **IF any criterion C1–C4 is [ ] NOT MET:**
     *   **Action:** Suspend Sprint Planning calculations immediately. 
     *   **Prompt:** Ask the user to provide the missing data. 
     *   *Example:* "To proceed with Empirical Sprint Planning, the system requires [Missing Criterion, e.g., the team's historical velocity and expected time-off for this Sprint]. Planning without this data violates Empirical Process Control and leads to unrealistic commitments."
+*   **IF C5 is [ ] NOT MET (but C1–C4 are MET):**
+    *   **Action:** Proceed to capacity calculations, but do not convert available hours/days into a Story Point Commitment Range. Plan using Net Available Effort-Hours and developer-days only.
 *   **IF all criteria are [x] MET:**
-    *   **Action:** Proceed to the mathematical engine (One-Part Planning). Utilize the provided inputs to calculate Available Effort-Hours and facilitate the creation of the Sprint Backlog and finalized Sprint Goal.
+    *   **Action:** Proceed to the mathematical engine (One-Part Planning). Utilize the capacity and velocity inputs to calculate Available Effort-Hours and forecast a Story Point Commitment Range.

@@ -36,12 +36,22 @@ pie title Development Team Capacity in a Sprint
 ### B. Determining Effort-Hour Capacity (Table 19.2)
 *Calculated based on actual availability to perform task-level work during this Sprint.*
 
-| Person | Days Available (Less PTO) | Days for Other Scrum Activities | Hours per Day (Net of Support) | Available Effort-Hours |
-| :--- | :---: | :---: | :---: | :---: |
-| *[Agent: Name 1]* | *[Days]* | *[e.g., 1.5]* | *[Hours]* | **[Calculation: (Days Available - Scrum Activities) * Hours]** |
-| *[Agent: Name 2]* | *[Days]* | *[e.g., 1.5]* | *[Hours]* | **[Calculation: (Days Available - Scrum Activities) * Hours]** |
-| *[Agent: Name 3]* | *[Days]* | *[e.g., 1.5]* | *[Hours]* | **[Calculation: (Days Available - Scrum Activities) * Hours]** |
-| **TOTAL** | | | | **[Total Net Hours]** |
+| Person | Days Available (Less PTO/Holidays) | Hours/Day | Focus Factor | Focus Hours | Ceremony Hours | Net Available Effort-Hours |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| *[Agent: Name 1]* | *[Days]* | *[e.g., 8]* | *[e.g., 70%]* | *[Days * Hours * FF]* | *[Hours]* | **[Calculation: Focus Hours - Ceremony Hours]** |
+| *[Agent: Name 2]* | *[Days]* | *[e.g., 8]* | *[e.g., 70%]* | *[Days * Hours * FF]* | *[Hours]* | **[Calculation: Focus Hours - Ceremony Hours]** |
+| *[Agent: Name 3]* | *[Days]* | *[e.g., 8]* | *[e.g., 70%]* | *[Days * Hours * FF]* | *[Hours]* | **[Calculation: Focus Hours - Ceremony Hours]** |
+| **TOTAL** | | | | | | **[Total Net Hours]** |
+
+### C. Story Point Commitment Range
+*Forecasting commitment using the team's historical velocity (points per dev-day calculated over the last 3+ Sprints).*
+
+*   **Average Velocity (last 3 Sprints):** *[Agent: Avg Points]* points
+*   **Average Capacity (last 3 Sprints):** *[Agent: Avg Dev-Days]* dev-days
+*   **Team Productivity Rate:** *[Agent: Points/Dev-Day]* points per dev-day
+*   **Recommended Commitment Range (0.85x to 1.00x):** **[Agent: Range Floor] to [Agent: Range Ceiling]** points
+*   *Note: If historical velocity is not available or is unstable (< 3 Sprints), point-based forecasting is disabled. Plan using developer-days and Net Available Effort-Hours.*
+
 
 ## 3. 📦 TOPIC TWO: WHAT CAN BE DONE THIS SPRINT?
 *Based on the Sprint Goal and the total Available Effort-Hours, the Developers forecast the following Product Backlog Items (PBIs).*
