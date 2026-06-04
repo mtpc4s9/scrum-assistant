@@ -90,9 +90,16 @@ scrum-assistant/
     │       ├── sprint-planning-facilitation-deck.md # [B] SM Facilitation Deck (live SM tool)
     │       └── sprint-planning-stakeholder-deck.md  # [C] Stakeholder Summary Deck (pptx-friendly)
     ├── step-08-daily-scrum/
-    │   └── SKILL.md                # Daily Scrum (Backbone Step 8)
+    │   ├── SKILL.md                # Daily Scrum Router (Backbone Step 8)
+    │   ├── checklists/
+    │   │   └── daily-scrum-health-check.md # Daily diagnostic checklist
+    │   ├── references/
+    │   │   └── walk-the-board-guide.md # Walk-the-Board flow & Confidence Poll
+    │   └── templates/
+    │       ├── daily-sync-update.md # Developer standup update layout
+    │       └── impediment-log.md   # Blocker tracking log with Days Open
     ├── step-09-sprint-execution/
-    │   └── SKILL.md                # Sprint Execution & Impediment Management (Backbone Step 9)
+    │   └── SKILL.md                # Blocker resolution & pattern analysis (Backbone Step 9)
     ├── step-10-refinement/
     │   └── SKILL.md                # Backlog Refinement (Backbone Step 10)
     ├── step-11-sprint-review/
