@@ -78,7 +78,15 @@ scrum-assistant/
     │       ├── team-norm.md                   # [C] Working Agreements core document
     │       └── team-norm-presentation-deck.md # [D] PPTX-ready outline for team sign-off ceremony
     ├── step-07-sprint-planning/
-    │   └── SKILL.md                # Sprint Planning (Backbone Step 7)
+    │   ├── SKILL.md                # Sprint Planning (Backbone Step 7)
+    │   ├── checklists/
+    │   │   └── input-readiness.md  # Quality gate checklist
+    │   ├── references/
+    │   │   └── one-part-planning-guide.md # On-demand: One-Part planning logic & Table 19.2/Figure 19.5 math
+    │   └── templates/
+    │       ├── sprint-planning.md                  # [A] Core Document (internal detailed plan)
+    │       ├── sprint-planning-facilitation-deck.md # [B] SM Facilitation Deck (live SM tool)
+    │       └── sprint-planning-stakeholder-deck.md  # [C] Stakeholder Summary Deck (pptx-friendly)
     ├── step-08-daily-scrum/
     │   └── SKILL.md                # Daily Scrum (Backbone Step 8)
     ├── step-09-sprint-execution/
