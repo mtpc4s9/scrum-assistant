@@ -99,7 +99,15 @@ scrum-assistant/
     │       ├── daily-sync-update.md # Developer standup update layout
     │       └── impediment-log.md   # Blocker tracking log with Days Open
     ├── step-09-sprint-execution/
-    │   └── SKILL.md                # Blocker resolution & pattern analysis (Backbone Step 9)
+    │   ├── SKILL.md                # Sprint execution & blocker resolution router (Backbone Step 9)
+    │   ├── checklists/
+    │   │   └── increment-dod-gate.md  # Quality gate checklist
+    │   ├── references/
+    │   │   ├── flow-and-swarming-guide.md # On-demand: Lean workflow & swarming guide
+    │   │   └── impediment-resolution-guide.md # On-demand: RCA & impediment resolution guide
+    │   └── templates/
+    │       ├── impediment-action-plan.md  # [A] Action plan and escalation email template
+    │       └── sprint-progress-radiator.md # [B] Slack/Teams progress radiator template
     ├── step-10-refinement/
     │   └── SKILL.md                # Backlog Refinement (Backbone Step 10)
     ├── step-11-sprint-review/
