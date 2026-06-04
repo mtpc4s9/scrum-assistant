@@ -30,7 +30,47 @@ purpose: Serve as the primary, live-updatable facilitation deck for the Scrum Ma
 
 ---
 
-## SLIDE 2: Topic 1: WHY is this Sprint valuable?
+## SLIDE 2: One-Part Sprint Planning Process
+*This flowchart illustrates the iterative One-Part Sprint Planning loop: we select a PBI, task it out immediately to gain confidence, and subtract its hours from our capacity before deciding to pull the next item.*
+
+```mermaid
+flowchart LR
+    A(["📊 Determine Capacity"])
+    B(["🎯 Refine Sprint Goal"])
+    C(["📋 Select Product Backlog Item"])
+    D(["🔍 Gain Confidence \n Item Can Be Completed"])
+    E{"🤔 Can Commit?"}
+    F(["➕ Add Story To Commitment"])
+    G{"📦 At Capacity?"}
+    H(["✅ Finalize Sprint Commitment"])
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|"Yes"| F
+    F --> G
+    E -->|"No"| G
+    G -->|"No"| B
+    G -->|"Yes"| H
+
+    classDef process fill:#1E3A5F,stroke:#60A5FA,stroke-width:2px,color:#DBEAFE,font-size:13px,font-weight:600
+    classDef decision fill:#78350F,stroke:#FBBF24,stroke-width:2px,color:#FEF3C7,font-size:13px,font-weight:600
+    classDef finish fill:#064E3B,stroke:#34D399,stroke-width:3px,color:#D1FAE5,font-size:13px,font-weight:700
+
+    class A,B,C,D,F process
+    class E,G decision
+    class H finish
+
+    linkStyle 7 stroke:#F97316,stroke-width:2px,stroke-dasharray:8 4
+    linkStyle 8 stroke:#34D399,stroke-width:2px
+```
+
+🎤 *SM Facilitation Prompt: "Team, this is the One-Part Planning process we will follow today. Instead of sizing everything first, we will take one PBI at a time, break it down to tasks, check if it fits our remaining capacity, and commit to it before moving to the next one. This prevents over-commitment."*
+
+---
+
+## SLIDE 3: Topic 1: WHY is this Sprint valuable?
 *   **Business Opportunity / Context:**
     *   *[Agent: Insert 1-2 sentences summarizing the PO's current market driver or user problem]*
 *   **Drafting the Sprint Goal:**
@@ -42,7 +82,7 @@ purpose: Serve as the primary, live-updatable facilitation deck for the Scrum Ma
 
 ---
 
-## SLIDE 3: Team Capacity Overview (Figure 19.5)
+## SLIDE 4: Team Capacity Overview (Figure 19.5)
 *To plan realistically and maintain a sustainable pace, we allocate our total Sprint hours across five key categories:*
 
 ```mermaid
@@ -58,7 +98,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 4: Capacity Calculation (Table 19.2 Aggregate)
+## SLIDE 5: Capacity Calculation (Table 19.2 Aggregate)
 *Team-wide aggregate math to determine total effort-hours available for PBI task work:*
 
 | Capacity Metric | Team Total (Aggregate) |
@@ -74,7 +114,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 5: Topic 2: WHAT can be done this Sprint?
+## SLIDE 6: Topic 2: WHAT can be done this Sprint?
 *Evaluating the highest priority Product Backlog Items (PBIs) matching our Sprint Goal:*
 
 *   **PBI 1:** *[Agent: User Story Story-1]* (*[Size]* pts) - Meets DoR: **Yes**
@@ -89,7 +129,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 6: Topic 3: HOW will the work get done?
+## SLIDE 7: Topic 3: HOW will the work get done?
 *Executing the One-Part Planning Loop: Select -> Task Out -> Deduct Hours -> Repeat.*
 
 *   **PBI #1: [PBI Name]**
@@ -107,7 +147,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 7: Commitment & Definition of Done (DoD)
+## SLIDE 8: Commitment & Definition of Done (DoD)
 *Confirming the plan and aligning on quality standards:*
 
 *   **Definition of Done (DoD) Agreement:**
@@ -123,7 +163,7 @@ pie title Team Capacity Allocation
 
 ---
 
-## SLIDE 8: Sprint Review Invitation
+## SLIDE 9: Sprint Review Invitation
 *Sharing our commitment and inviting collaboration at the end of the Sprint:*
 
 *   **What will be inspected:**
