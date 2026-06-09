@@ -4,7 +4,7 @@ description: >
   Applies proven story splitting patterns to break an oversized user story or epic into sprint-sized, independently deliverable stories.
   Triggered when the user says: "this story is too big", "we need to split this", "this will not fit in a sprint", "break this epic down", "help me slice this story", "fails INVEST", or in Vietnamese: "tách user story", "chia nhỏ story", "split story", "tách nhỏ công việc", "phân rã story".
 license: MIT
-compatibility: Works with or without a project management MCP. When ADO or Jira MCP is connected, fetches the story by ID and can create the split stories directly in the backlog. Falls back to a pasted story.
+compatibility: Platform agnostic. Designed for manual copy-paste workflow. Does not directly modify target ticketing systems, keeping all control with the user.
 metadata:
   ceremony: Backlog Refinement
   perspective: Product Owner / Developer
@@ -20,24 +20,11 @@ A story that cannot fit in one Sprint is a planning liability — it blocks comm
 
 ---
 
-## Tool Detection
+## Step 1 — Get the Story
 
-1. Check for active `mcp__azure-devops__*` tools → `$PM_TOOL = ado`
-2. Check for active `mcp__jira__*` tools → `$PM_TOOL = jira`
-3. If both → ask which tool to use
-4. If neither → `$PM_TOOL = manual`
+Ask the user to paste the content or provide the title and description of the User Story or Epic that needs splitting.
 
----
-
-## Step 1 — Fetch the Story
-
-Ask: *"Which story needs splitting? Provide the ID or paste the content."*
-
-- **ADO:** use `wit_get_work_item` — read title, description, acceptance criteria, story points, and parent
-- **Jira:** use the get-issue tool — read summary, description, acceptance criteria, story points, and epic link
-- **Manual:** accept pasted content
-
-If the item is an Epic, treat the whole Epic as the input. Store as `$STORY`.
+Store this as `$STORY`.
 
 ---
 
@@ -191,19 +178,24 @@ Size signal: [Small — fits one Sprint / Medium — verify with team]
 Dependency: [None / Depends on Story N being done first]
 ```
 
-Then present the full set and ask: *"Does this split make sense? Any stories to merge, rename, or reorder before I create them?"*
+Then present the full set and ask: *"Does this split make sense? Any stories to merge, rename, or reorder?"*
 
 ---
 
-## Step 5 — Confirm and Create
+## Step 5 — Present for Copy-Paste
 
-After confirmation:
+After the user confirms the proposed split:
+1. Output the final refined list of all split User Stories with Gherkin-style Acceptance Criteria.
+2. Prompt the user to copy-paste the outputted Markdown content to JIRA/ADO to create the new Product Backlog Items manually.
+3. Remind the user to reference the original oversized story's ID or parent (Epic/Feature) when creating the new stories.
 
-- **ADO:** create each story as a Product Backlog Item using `wit_create_work_item`, linked to the original parent Feature or Epic
-- **Jira:** create each story as a Story linked to the original Epic
-- Optionally mark the original oversized story as Resolved/Closed with a comment: *"Split into [#IDs]."*
+---
 
-Never create without explicit confirmation.
+## Step 6 — Verify Against Definition of Ready (DoR)
+
+Before completing the handoff back to the Backlog Refinement orchestrator (Step 10):
+1. Validate that each new split story complies with the Definition of Ready (DoR) standard at [../../step-06-standards-setup/templates/definition-of-ready.md](../../step-06-standards-setup/templates/definition-of-ready.md).
+2. Ensure each story is small enough, independent, and clear.
 
 ---
 

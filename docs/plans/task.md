@@ -1,10 +1,9 @@
-# Task Tracker: Step-09 Sprint Execution Integration
+# Task Tracker: Step-10 Refinement Integration
 
 | Status | Task ID | Description |
 | :--- | :--- | :--- |
-| `[x]` | T1 | Merge and rewrite `skills/step-09-sprint-execution/SKILL.md` (integrate Mode C, D, E, pattern detection, stakeholder update, self-audit) |
-| `[x]` | T2 | Add output directive to `skills/step-09-sprint-execution/references/impediment-resolution-guide.md` |
-| `[x]` | T3 | Update `ARCHITECTURE.md` with full step-09 tree |
-| `[x]` | T4 | Delete `skills/step-09-sprint-execution/SKILL-new.md` |
-| `[/]` | T5 | Verify relative paths, boundaries, and git status |
-| `[ ]` | T6 | Commit and push to GitHub |
+| `[x]` | T1 | Fix path mismatches in Step-10 Refinement files |
+| `[x]` | T2 | Remove MCP and update shared story-splitting skill to support semi-auto copy-paste workflow |
+| `[x]` | T3 | Update `ARCHITECTURE.md` with full step-10 tree |
+| `[/]` | T4 | Verify all relative paths, boundaries, and git status |
+| `[ ]` | T5 | Commit and push to GitHub |

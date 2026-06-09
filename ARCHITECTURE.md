@@ -109,7 +109,12 @@ scrum-assistant/
     │       ├── impediment-action-plan.md  # [A] Action plan and escalation email template
     │       └── sprint-progress-radiator.md # [B] Slack/Teams progress radiator template
     ├── step-10-refinement/
-    │   └── SKILL.md                # Backlog Refinement (Backbone Step 10)
+    │   ├── SKILL.md                # Backlog Refinement Orchestrator (Backbone Step 10)
+    │   ├── checklists/
+    │   │   └── dor-readiness-check.md  # DoR readiness check logic
+    │   └── references/
+    │       ├── story-splitting-guide.md # story splitting handoff guide
+    │       └── three-amigos-bdd-guide.md # three amigos facilitation guide
     ├── step-11-sprint-review/
     │   └── SKILL.md                # Sprint Review (Backbone Step 11)
     ├── step-12-sprint-retrospective/
