@@ -30,6 +30,7 @@ When generating the Definition of Done (DoD), the AI Agent MUST adhere to these 
 
 ### 2. 🧪 TESTING & VALIDATION
 - [ ] Item-specific Acceptance Criteria (Local quality) have been fully met and verified by the **Product Owner**.
+- [ ] **Product Owner Verification:** The Product Owner has reviewed and verified the completed work item prior to the Sprint Review.
 - [ ] Automated regression tests have been executed and passed without breaking existing functionality.
 - [ ] Manual exploratory testing has been conducted for the primary user flows.
 - [ ] The feature performs within acceptable response time limits (Performance/Load testing baseline met).

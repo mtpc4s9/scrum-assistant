@@ -1,38 +1,45 @@
 ---
 name: step-11-sprint-review
-description: Facilitate Sprint Review collaborative working sessions, demonstrate usable Increments, and adjust the backlog.
+description: Orchestrates Step 11 - Sprint Review. Enforces pre-meeting logistics and DoD validation, generates the presentation slide deck, and triages post-meeting live notes into new Product Backlog Items or Audience-Specific Release Notes.
 ---
 
-# Step 11 — Sprint Review
+### Step 11: Sprint Review (Orchestrator)
+This skill serves as the central cognitive router for the Sprint Review event. It acts as a strict gatekeeper before the meeting (Prework) to protect Transparency, and functions as an intelligent triage engine after the meeting to route stakeholder feedback and release decisions to the appropriate shared worker skills.
 
-This skill controls the execution of the Sprint Review ceremony. The Scrum Team uses this step to demonstrate the usable Increment to stakeholders, gather feedback, and adjust the Product Backlog.
+--------------------------------------------------------------------------------
 
----
-
-## 0. Backbone & Phase Context
+#### 0. Backbone & Phase Context
 *   **Backbone Step:** Step 11 — Sprint Review
 *   **Scrum Flow Phase:** Phase 1 — Sprint Loop
-*   **Primary Owner:** The Scrum Team + Key Stakeholders (Business Sponsors, Compliance Officers, End Users).
-*   **Core Objective:** Inspect the Sprint outcome, demonstrate completed backlog items, obtain feedback on the product direction, and collaborate on what to do next.
+*   **Primary Owner:** Scrum Team + Stakeholders (Collaborative working session).
+*   **Core Objective:** Inspect the "Done" Increment, discuss market changes, and Adapt the Product Backlog and Release Plan.
+*   **Architectural Role:** Orchestrator. Relies on `../shared/` skills for final PBI and Release Note generation.
 
----
+--------------------------------------------------------------------------------
 
-## 1. Step Guidelines
+#### 1. Intent Detection & Routing Logic
+The Agent MUST detect intent and route to the appropriate execution mode:
 
-### 1.1 Trigger Conditions & Keywords
-The assistant triggers this skill when:
-*   **English Triggers:** "run sprint review", "demo increment", "sprint review ceremony", "gather stakeholder feedback", "sprint review outcomes"
-*   **Vietnamese Triggers (Trữ nguyên trạng):** "chạy sprint review", "demo sản phẩm", "họp sprint review", "lấy ý kiến stakeholder", "kết quả sprint review"
+*   **Mode A (Prework & Slide Generation - Pre-Meeting):** 
+    *   *Keywords:* "prepare for review", "create slides", "chuẩn bị sprint review", "tạo slide".
+    *   *Action:* Silently load `checklists/sprint-review-prework-checklist.md`. Conduct the mandatory AI-to-User interview with the **Product Owner**. Only after all answers are validated, generate `templates/sprint-review-slide-deck.md`.
 
-### 1.2 Review Facilitation Checklist
-*   Check that the demonstrated item meets the **Definition of Done (DoD)**.
-*   Log feedback as new Product Backlog Items (PBIs) or adjustments to existing ones.
+*   **Mode B (Live Notes Triage & Handoff - Post-Meeting):** 
+    *   *Keywords:* "process feedback", "triage notes", "xử lý live notes", "làm release notes".
+    *   *Action:* Silently load `references/feedback-triage-guide.md`. Analyze the provided `[LIVE NOTES]` from the slide deck.
 
----
+--------------------------------------------------------------------------------
 
-## 2. Shared Stakeholder Communication Sub-Skill
+#### 2. Mode B Handoff Guardrails (Embedded Release Note Intelligence)
+When operating in Mode B and the user explicitly states "ACCEPT" for a release decision, the Step 11 Agent MUST prepare the payload for the Release Note Worker by adhering to these embedded rules:
 
-Following the Sprint Review, the Product Owner or Scrum Master must distribute a summary of the Sprint outcomes, achieved goals, and next steps to the wider business and steering committees.
+1.  **Enforce the Definition of Done:** Filter out any items marked as "Partial" or "In Progress". Only strictly "Done" items from the Sprint can be included in the release handoff.
+2.  **Audience Identification (Trigger Socratic Prompt):** Ask the **Product Owner**: *"Before I generate the Release Notes, who is the target audience? (1. Customers/End Users - Plain language, no jargon; 2. Internal Stakeholders - Business outcomes & metrics; 3. Technical Stakeholders - Arch changes & migrations)."*
+3.  **Technical Debt Filter:** Do not pass purely technical work items (e.g., infrastructure, dependency bumps) to the worker UNLESS the chosen audience is "Technical Stakeholders" or the item has a direct, visible user impact.
+4.  **Delegation:** Once the audience is confirmed, package the filtered "Done" items + Audience context + Theme groupings, and trigger the Shared Skill:
+    👉 `../shared/po-release-notes/SKILL.md`
 
-*   **Action:** To draft the formal post-review communication, the assistant **MUST** invoke the shared stakeholder update skill at [../shared/stakeholder-update/SKILL.md](../shared/stakeholder-update/SKILL.md).
-*   **Execution rule:** Follow the templates in the shared skill to create the status update. Ensure the text translates technical changes (e.g., RNG compliance certificates or Single Wallet API latencies) into user-facing benefits and business milestones.
+--------------------------------------------------------------------------------
+
+#### 3. Continuous Adaptation
+Once shared skills return the generated artifacts (new PBIs or Release Notes), the Step 11 Agent resumes control, reminding the **Product Owner**: *"The Product Backlog has been adapted based on today's inspection. These new items will be prioritized and refined before entering any future Sprint."*

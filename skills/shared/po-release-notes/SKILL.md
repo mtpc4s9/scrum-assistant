@@ -2,7 +2,7 @@
 name: po-release-notes
 description: Generates audience-appropriate release notes from completed Sprint work items — translating technical changes into plain-language user outcomes for stakeholders, customers, or internal teams. Use when a Product Owner says things like "write release notes", "what shipped this Sprint", "generate a changelog", "what did we deliver", "draft the release email", or "summarise what we released". Do not use for sprint review facilitation — use sprint-review for that. Do not use for velocity analysis.
 license: MIT
-compatibility: Works with or without a project management MCP. When ADO or Jira MCP is connected, reads completed work items from the current or most recent Sprint automatically. Falls back to a pasted list of items. Compatible with Claude Code, Cursor, GitHub Copilot, and any agentskills.io-compatible agent.
+compatibility: Platform agnostic. Designed for manual copy-paste workflow. Does not directly modify target ticketing systems or wikis, keeping all control with the user.
 metadata:
   ceremony: Sprint Review
   perspective: Product Owner
@@ -15,14 +15,6 @@ metadata:
 ## Purpose
 
 Release notes are not a commit log. Stakeholders and customers do not care which service was refactored — they care what they can do now that they couldn't do before. This skill reads the Sprint's completed work items and translates them into outcomes, grouped by theme, in language the audience actually understands.
-
----
-
-## Tool detection
-
-1. Check for active `mcp__azure-devops__*` tools → `$PM_TOOL = ado`
-2. Check for active `mcp__jira__*` tools → `$PM_TOOL = jira`
-3. If neither → `$PM_TOOL = manual`
 
 ---
 
@@ -40,13 +32,11 @@ Store as `$SPRINT` and `$AUDIENCE`.
 
 ---
 
-## Step 2 — Fetch completed work items
+## Step 2 — Get completed work items
 
-- **ADO:** use `wit_get_work_items_for_iteration` filtered to Done/Closed state, or use `wit_query_by_wiql` for the iteration. Read title, description, acceptance criteria, and type (Story, Bug, Task, Feature).
-- **Jira:** use sprint reporting tools to list resolved issues. Read summary, description, issue type, and fix version.
-- **Manual:** ask *"Paste the list of completed items — title, type, and a one-line description is enough."*
+Ask the user: *"Paste the list of completed items — title, type, and a one-line description is enough."*
 
-Exclude purely technical work items (infrastructure tasks, pipeline fixes, dependency bumps) unless they have user-visible impact. When in doubt, ask the PO.
+Exclude purely technical work items (infrastructure tasks, pipeline fixes, dependency bumps) unless they have user-visible impact. When in doubt, ask the Product Owner.
 
 ---
 
@@ -120,11 +110,10 @@ If multiple audiences were requested, generate a separate version for each:
 
 Present the draft(s) and ask: *"Does this capture what shipped accurately? Any items to add, remove, or reword before I finalise?"*
 
-Apply corrections. Once confirmed, output the final notes ready to:
-- Paste into an ADO Wiki page (`mcp__azure-devops__wiki_create_or_update_page` if available)
-- Copy to a Confluence/Notion page
+Apply corrections. Once confirmed, output the final notes in a clean Markdown format ready to:
+- Paste into a Confluence/Notion page
 - Drop into a Slack release announcement
-- Send as a Sprint Review email
+- Send as a Sprint Review email or wiki page
 
 ---
 

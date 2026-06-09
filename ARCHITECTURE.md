@@ -116,7 +116,13 @@ scrum-assistant/
     │       ├── story-splitting-guide.md # story splitting handoff guide
     │       └── three-amigos-bdd-guide.md # three amigos facilitation guide
     ├── step-11-sprint-review/
-    │   └── SKILL.md                # Sprint Review (Backbone Step 11)
+    │   ├── SKILL.md                # Sprint Review Orchestrator (Backbone Step 11)
+    │   ├── checklists/
+    │   │   └── sprint-review-prework-checklist.md # Prework checklist & PO gate
+    │   ├── references/
+    │   │   └── feedback-triage-guide.md # Post-review feedback triage guide
+    │   └── templates/
+    │       └── sprint-review-slide-deck.md # Sprint review slides & notes cache
     ├── step-12-sprint-retrospective/
     │   └── SKILL.md                # Sprint Retrospective (Backbone Step 12)
     │
@@ -131,7 +137,8 @@ scrum-assistant/
     │    ├── product-discovery/
     │    ├── user-story-writing/
     │    ├── stakeholder-update/
-    │    └── story-splitting/
+    │    ├── story-splitting/
+    │    └── po-release-notes/
     │
     └── templates/                  # Shared document & canvas templates
         ├── agile_a4_sprint_report.md  # A4 print-ready summary report
