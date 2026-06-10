@@ -6,5 +6,5 @@
 | `[x]` | T2 | Fix path mismatches in step-12 templates (insight-backlog.md) |
 | `[x]` | T3 | Delete step-12 SKILL-audit-sprint-retro.md reference file |
 | `[x]` | T4 | Update `ARCHITECTURE.md` with full step-12 tree |
-| `[/]` | T5 | Verify all relative paths, boundaries, and git status |
-| `[ ]` | T6 | Commit and push to GitHub |
+| `[x]` | T5 | Verify all relative paths, boundaries, and git status |
+| `[x]` | T6 | Commit and push to GitHub |
