@@ -1,6 +1,6 @@
 # Scrum Assistant - System Architecture & Directory Layout
 
-This document outlines the file layout, directory organization, and cross-reference architecture of the `scrum-assistant` toolkit. It serves as a physical map for developers and AI agents to locate reference materials, active sub-skills, and templates, aligning directly with the **Scrum Flow Backbone** ([scrum-flow-backbone.md](file:///C:/Users/TruongPhan/.gemini/antigravity/scratch/scrum-assistant/reference/scrum-flow-backbone.md)).
+This document outlines the file layout, directory organization, and cross-reference architecture of the `scrum-assistant` toolkit. It serves as a physical map for developers and AI agents to locate reference materials, active sub-skills, and templates, aligning directly with the **Scrum Flow Backbone** ([scrum-flow-backbone.md](reference/scrum-flow-backbone.md)).
 
 ---
 
@@ -42,9 +42,15 @@ scrum-assistant/
     │   │   └── impact-mapping-guide.md # On-demand reference guide
     │   └── templates/
     │       ├── impact-map.md
-    │       └── product-goal-statement.md
+    │       ├── product-goal-statement.md
+    │       └── impact-mapping-canvas.md
     ├── step-03-goal-prioritization/
-    │   └── SKILL.md                # Goal Prioritization (Backbone Step 3)
+    │   ├── SKILL.md                # Goal Prioritization (Backbone Step 3)
+    │   ├── references/
+    │   │   ├── cost-of-delay-guide.md
+    │   │   └── wsjf-guide.md
+    │   └── templates/
+    │       └── prioritized-goal-decision.md
     ├── step-04-backlog-creation/
     │   ├── SKILL.md                # Backlog Creation & Roadmapping (Backbone Step 4)
     │   ├── checklists/
@@ -55,7 +61,8 @@ scrum-assistant/
     │   └── templates/
     │       ├── epic-feature-tree.md
     │       ├── high-level-product-backlog.md
-    │       └── product-roadmap.md
+    │       ├── product-roadmap.md
+    │       └── story-mapping-board.md
     ├── step-05-release-planning/
     │   ├── SKILL.md                # Release Planning (Backbone Step 5)
     │   ├── checklists/
@@ -88,7 +95,8 @@ scrum-assistant/
     │   └── templates/
     │       ├── sprint-planning.md                  # [A] Core Document (internal detailed plan)
     │       ├── sprint-planning-facilitation-deck.md # [B] SM Facilitation Deck (live SM tool)
-    │       └── sprint-planning-stakeholder-deck.md  # [C] Stakeholder Summary Deck (pptx-friendly)
+    │       ├── sprint-planning-stakeholder-deck.md  # [C] Stakeholder Summary Deck (pptx-friendly)
+    │       └── sprint-planning-deck.md              # [D] Sprint Planning Slide Deck
     ├── step-08-daily-scrum/
     │   ├── SKILL.md                # Daily Scrum Router (Backbone Step 8)
     │   ├── checklists/
@@ -122,7 +130,8 @@ scrum-assistant/
     │   ├── references/
     │   │   └── feedback-triage-guide.md # Post-review feedback triage guide
     │   └── templates/
-    │       └── sprint-review-slide-deck.md # Sprint review slides & notes cache
+    │       ├── sprint-review-slide-deck.md # Sprint review slides & notes cache
+    │       └── agile-a4-sprint-report.md   # Agile A4 Sprint Report
     ├── step-12-sprint-retrospective/
     │   ├── SKILL.md                # Sprint Retrospective Orchestrator (Backbone Step 12)
     │   ├── checklists/
@@ -147,11 +156,7 @@ scrum-assistant/
     │    ├── story-splitting/
     │    └── po-release-notes/
     │
-    └── templates/                  # Shared document & canvas templates
-        ├── agile_a4_sprint_report.md  # A4 print-ready summary report
-        ├── impact_mapping_canvas.md   # Product goal to feature breakdown canvas
-        ├── sprint_planning_deck.md    # Ceremony presentation layout
-        └── story_mapping_board.md     # Visual story mapping structure
+    └── (No shared templates folder - mapped into step subfolders)
 ```
 
 ---

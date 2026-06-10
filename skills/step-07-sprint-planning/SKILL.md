@@ -1,15 +1,15 @@
 ---
 name: step-07-sprint-planning
-description: Execute Step 7 - Sprint Planning using the One-Part Planning approach, calculating effort-hour capacity, and generating the Sprint Planning Core Document, Facilitation Deck, or Stakeholder Deck.
+description: Execute Step 7 - Sprint Planning using the One-Part Planning approach, calculating effort-hour capacity, and generating the Sprint Planning Core Document, Facilitation Deck, Stakeholder Deck, or Sprint Planning Slide Deck.
 ---
 
-### Step 07: Sprint Planning
+# Step 07: Sprint Planning
 
 This skill controls the execution of the **Step 7 - Sprint Planning** workflow. The objective is to facilitate a collaborative event where the Scrum Team establishes a Sprint Goal and the Developers make a realistic, mathematically sound commitment (Sprint Backlog) using the One-Part Sprint Planning approach.
 
 --------------------------------------------------------------------------------
 
-#### 0. Backbone & Phase Context
+## 0. Backbone & Phase Context
 *   **Backbone Step:** Step 7 — Sprint Planning
 *   **Scrum Flow Phase:** Phase 1 — Sprint Loop
 *   **Primary Owner:** Entire Scrum Team (PO proposes WHY/WHAT, Developers own the HOW and the final Commitment).
@@ -18,10 +18,11 @@ This skill controls the execution of the **Step 7 - Sprint Planning** workflow. 
     *   **[A] Sprint Planning Core Document** (`templates/sprint-planning.md`) — Internal detailed Scrum Team plan.
     *   **[B] Sprint Planning Facilitation Deck** (`templates/sprint-planning-facilitation-deck.md`) — Live Scrum Master coordination tool.
     *   **[C] Sprint Planning Stakeholder Deck** (`templates/sprint-planning-stakeholder-deck.md`) — C-level / Stakeholder summary.
+    *   **[D] Sprint Planning Slide Deck** (`templates/sprint-planning-deck.md`) — Ceremony presentation slide deck.
 
 --------------------------------------------------------------------------------
 
-#### 1. Phase 1 — Input Quality Gate
+## 1. Phase 1 — Input Quality Gate
 *   **Trigger Keywords (English & Vietnamese):** "sprint planning", "lập kế hoạch sprint", "step 7", "kế hoạch sprint", "bắt đầu sprint".
 *   **Discovery Loop Rule:**
     1.  **Invoke Quality Gate:** Silently load [checklists/input-readiness.md](checklists/input-readiness.md).
@@ -36,7 +37,7 @@ This skill controls the execution of the **Step 7 - Sprint Planning** workflow. 
 
 --------------------------------------------------------------------------------
 
-#### 2. Phase 2 — Mathematical Engine & Planning Loop
+## 2. Phase 2 — Mathematical Engine & Planning Loop
 *   **Agent Directive:**
     1.  **Load References:** Silently load:
         *   [references/one-part-planning-guide.md](references/one-part-planning-guide.md)
@@ -56,18 +57,19 @@ This skill controls the execution of the **Step 7 - Sprint Planning** workflow. 
 
 --------------------------------------------------------------------------------
 
-#### 3. Phase 3 — Template Catalogue & Generation
+## 3. Phase 3 — Template Catalogue & Generation
 *   **Template Catalogue:**
     *   **[A] Core Document:** Generates detailed task breakdown, individual capacity calculations (Table 19.2), Figure 19.5 Pie chart, and Story Point Commitment Range.
     *   **[B] Facilitation Deck:** Generates slide-by-slide facilitation prompts, Mermaid pie, aggregate capacity table, and Velocity Coaching Observations.
     *   **[C] Stakeholder Deck:** Generates high-level PPTX-friendly summary showing goal, aggregate capacity, forecasted deliverables, and no developer names.
+    *   **[D] Sprint Planning Slide Deck:** Generates a ready-to-use ceremony slide deck with agenda, velocity baselines, and backlog commitment overview.
 *   **Execution Instructions:**
-    *   Do NOT choose a template automatically. Prompt the user: "Chủ nhân muốn xuất bản template nào trước? [A] Core Document, [B] Facilitation Deck, hay [C] Stakeholder Deck?"
+    *   Do NOT choose a template automatically. Prompt the user: "Chủ nhân muốn xuất bản template nào trước? [A] Core Document, [B] Facilitation Deck, [C] Stakeholder Deck, hay [D] Sprint Planning Slide Deck?"
     *   Once a selection is made, load the corresponding file from `templates/` and generate the output, adhering to all instructions in its AGENT DIRECTIVE.
 
 --------------------------------------------------------------------------------
 
-#### 4. Readiness Self-Audit
+## 4. Readiness Self-Audit
 Before outputting any final artifact, the Agent must self-audit against these criteria:
 *   [ ] Have the capacity and velocity guides been loaded and applied?
 *   [ ] Are the capacity numbers mathematically sound and verified using the updated Table 19.2 formula (including Focus Factor and Ceremony Overhead)?

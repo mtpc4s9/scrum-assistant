@@ -46,9 +46,12 @@ Upon activation, the assistant must load the input quality gate checklist from [
 
 ---
 
-## 2. Phase 2 — Domain Context Overlay
+## 2. Phase 2 — Domain Context Overlay (Optional)
 
-Once the quality gate is cleared, the assistant overlays the product goal details with relevant iGaming regulations and EBM metrics.
+Before proceeding, the assistant MUST check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
+
+*   **IF the domain is NOT iGaming/Lottery:** Skip this phase entirely and proceed directly to Phase 3.
+*   **IF the domain IS iGaming/Lottery:** Execute the following scan protocol:
 
 ### 2.1 Keyword-Scoped Reading Strategy
 To optimize token efficiency and maintain strict context focus, the assistant **MUST NOT** read the entire `igaming-context.md` file. Instead, follow this protocol:
@@ -71,16 +74,17 @@ To prevent token bloat, the theoretical and practical guidelines for performing 
 The assistant **MUST NOT** generate any deliverables automatically. Instead, present the verified checklist and the compiled domain insights to the user, then display the template catalogue:
 
 ```
-Inputs validated. I have prepared the iGaming context overlay (EBM metrics & regulatory constraints).
+Inputs validated. I have prepared the domain context overlay (EBM metrics & optional constraints).
 Please select which deliverable you would like to generate first:
 
 [A] Product Goal Statement   → (Ref: templates/product-goal-statement.md)
 [B] Impact Map               → (Ref: templates/impact-map.md)
+[C] Impact Mapping Canvas    → (Ref: templates/impact-mapping-canvas.md)
 ```
 
 ### 3.3 Output Execution & Enrichment Rules
-Once the user specifies a selection (e.g., "Generate [A]" or "Làm Product Goal Statement"):
-1.  Load the target template file from the `templates/` folder (e.g., [templates/product-goal-statement.md](templates/product-goal-statement.md)).
+Once the user specifies a selection:
+1.  Load the target template file from the `templates/` folder (e.g., [templates/product-goal-statement.md](templates/product-goal-statement.md) or [templates/impact-mapping-canvas.md](templates/impact-mapping-canvas.md)).
 2.  Follow the **AGENT DIRECTIVE** instructions inside the loaded template precisely.
 3.  **Enrichment Rule:** Integrate the regulatory constraints and EBM metrics compiled in Phase 2 into the respective sections of the output:
     *   For **Product Goal Statement**: Formulate the commitment using SMART criteria, and define success metrics using EBM indicators.

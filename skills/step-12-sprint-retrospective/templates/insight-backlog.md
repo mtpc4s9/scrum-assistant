@@ -19,9 +19,9 @@ Analyze each inputted improvement idea and classify it:
 #### PHASE 2: PBI READINESS & SHARED SKILL HANDOFF (For Type B only)
 If an idea is classified as a Type B PBI, it must meet the Definition of Ready (DoR) before it can enter the **Product Backlog** and potentially the next **Sprint Backlog**.
 1.  **Size Check:** Evaluate the complexity. If the improvement is too large (e.g., "Automate all manual tests"), silently invoke the routing prompt to call: 
-    👉 `../shared/story-splitting/SKILL.md` to break the technical epic into vertical slices.
+    👉 `../../shared/story-splitting/SKILL.md` to break the technical epic into vertical slices.
 2.  **US Writing & DoR Check:** Once appropriately sized, silently package the context and trigger the shared skill:
-    👉 `../shared/user-story-writing/SKILL.md` to format the improvement into an INVEST-ready PBI with BDD Acceptance Criteria.
+    👉 `../../shared/user-story-writing/SKILL.md` to format the improvement into an INVEST-ready PBI with BDD Acceptance Criteria.
 3.  **Handoff Message:** *"Ý tưởng [Tên ý tưởng] là một hạng mục kỹ thuật lớn. Tôi đã gọi đặc vụ Story Splitting để cắt nhỏ và đặc vụ US Writer để viết thành PBI chuẩn BDD. Vui lòng đưa PBI này cho **Product Owner** để đánh giá ưu tiên trong **Product Backlog** nhé."*
 
 #### PHASE 3: OUTPUT GENERATION

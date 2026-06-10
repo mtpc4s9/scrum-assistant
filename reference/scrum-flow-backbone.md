@@ -400,11 +400,11 @@ The following domain-specific concerns apply across all steps for iGaming / Onli
 
 | Concern | Applies To | Reference |
 |---------|------------|-----------|
-| RTP Validation | DoD, Step 9 | `../templates/game-rules-math-sheet.md` |
-| Prize Structure Review | PBI Acceptance Criteria, Step 4/10 | `../templates/game-rules-math-sheet.md` |
-| Vendor/3rd-Party Dependencies | Release Planning, Refinement | `../templates/third-party-integration-matrix.md` |
-| Regulatory Compliance Gate | DoD, Sprint Review | `../reference/igaming-context.md` |
-| Payment Gateway Certification | Release Plan, Step 5 | `../templates/third-party-integration-matrix.md` |
+| RTP Validation | DoD, Step 9 | `game-rules-math-sheet.md` |
+| Prize Structure Review | PBI Acceptance Criteria, Step 4/10 | `game-rules-math-sheet.md` |
+| Vendor/3rd-Party Dependencies | Release Planning, Refinement | `third-party-integration-matrix.md` |
+| Regulatory Compliance Gate | DoD, Sprint Review | `igaming-context.md` |
+| Payment Gateway Certification | Release Plan, Step 5 | `third-party-integration-matrix.md` |
 
 ---
 

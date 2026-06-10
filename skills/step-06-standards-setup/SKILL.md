@@ -54,15 +54,18 @@ Upon activation, load [checklists/input-readiness.md](checklists/input-readiness
 
 ---
 
-## 2. Phase 2 — Domain Overlay & Standards Calibration
+## 2. Phase 2 — Domain Overlay & Standards Calibration (Optional Domain Scan)
 
 Once the quality gate is cleared, the assistant performs a domain-aware calibration before generating any artefact.
 
-### 2.1 Keyword-Scoped Reading Strategy
+### 2.1 Domain Scan (Optional)
+Check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
 
-1.  **Extract Keywords:** Identify domain-specific terms from the user's context (e.g., `Kambi`, `Pragmatic Play`, `PAGCOR`, `Decree 06`, `Vietlott`, `Momo`, `KYC`, `RNG`, `PAM`).
-2.  **Scan iGaming Context:** Open [../../reference/igaming-context.md](../../reference/igaming-context.md) and read **only** the sections with headings matching the extracted keywords.
-3.  **Inject Domain Constraints:** Determine which iGaming-specific quality checks must be embedded in the DoD (e.g., RTP validation, RNG fairness certification, transaction cap enforcement) and which must appear in the DoR (e.g., "Compliance impact assessed by Legal prior to sprint pull-in").
+*   **IF domain is NOT iGaming/Lottery:** Skip this domain scan and proceed directly to 2.2 Socratic Validation Layer.
+*   **IF domain IS iGaming/Lottery:**
+    1.  **Extract Keywords:** Identify domain-specific terms from the user's context (e.g., `Kambi`, `Pragmatic Play`, `PAGCOR`, `Decree 06`, `Vietlott`, `Momo`, `KYC`, `RNG`, `PAM`).
+    2.  **Scan iGaming Context:** Open [../../reference/igaming-context.md](../../reference/igaming-context.md) and read **only** the sections with headings matching the extracted keywords.
+    3.  **Inject Domain Constraints:** Determine which iGaming-specific quality checks must be embedded in the DoD (e.g., RTP validation, RNG fairness certification, transaction cap enforcement) and which must appear in the DoR (e.g., "Compliance impact assessed by Legal prior to sprint pull-in").
 
 ### 2.2 Socratic Validation Layer
 

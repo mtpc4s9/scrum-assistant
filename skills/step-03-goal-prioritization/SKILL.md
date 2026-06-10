@@ -32,14 +32,14 @@ Before prioritizing, the Agent MUST verify that the user has provided:
 
 --------------------------------------------------------------------------------
 
-#### 2. Phase 2 — Domain Context & Economic Overlay
+#### 2. Phase 2 — Domain Context & Economic Overlay (Optional Domain Scan)
 **Agent Directive (Contextualization & Analysis):**
-The Agent MUST silently analyze the candidate goals against two filters before generating the output:
+The Agent MUST check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
 
-*   **Filter 1: iGaming Domain Constraints (reference/igaming-context.md):**
+*   **Filter 1: Domain Constraints (reference/igaming-context.md - Applied only if domain is iGaming/Lottery):**
     *   Check for strict regulatory compliance deadlines (e.g., AML laws, PAGCOR mandates). *Rule:* Compliance deadlines often carry a massive Cost of Delay (fixed-date impact) and usually trump new revenue features.
     *   Check for 3rd-party vendor integration readiness (e.g., Kambi, Pragmatic Play).
-*   **Filter 2: Economic Prioritization (skills/step-03-goal-prioritization/references/prioritization-techniques.md):**
+*   **Filter 2: Economic Prioritization (references/cost-of-delay-guide.md and references/wsjf-guide.md - Applied for all domains):**
     *   Apply *Cost of Delay (CoD)*: Ask internally, "What is the financial or legal cost per month of NOT doing this goal?"
     *   Apply *Weighted Shortest Job First (WSJF)*: If sizes are known via T-shirt sizing, rank by CoD / Duration.
 

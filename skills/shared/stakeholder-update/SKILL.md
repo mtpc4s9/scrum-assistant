@@ -13,14 +13,6 @@ Stakeholders don't read ADO/Jira boards. They need to know three things: are we 
 
 ---
 
-## Tool Detection
-
-1. Check for active `mcp__azure-devops__*` tools → `$PM_TOOL = ado`
-2. Check for active `mcp__jira__*` tools → `$PM_TOOL = jira`
-3. If neither → `$PM_TOOL = manual`
-
----
-
 ## Step 1 — Understand the Context
 
 Ask: *"Who is this update for, and what format do they prefer — a brief Slack/Teams message, an email, or a more formal status report?"*
@@ -39,9 +31,7 @@ Store as `$AUDIENCE` and `$FORMAT`.
 
 ## Step 2 — Read the Current Sprint State
 
-- **ADO:** use `wit_get_work_items_for_iteration` for the active iteration. Read title, state, story points, and tags. Also use `work_get_team_settings` to confirm Sprint dates.
-- **Jira:** use the active sprint reporting tools to read issue states and progress.
-- **Manual:** ask *"Give me a quick brief — what has been completed, what is in progress, what is at risk, and how many days remain in the Sprint?"*
+Ask the user: *"Give me a quick brief — what has been completed, what is in progress, what is at risk, and how many days remain in the Sprint?"*
 
 Calculate:
 - Sprint progress: days elapsed vs. total Sprint days
@@ -69,7 +59,7 @@ If the Sprint Goal is at risk, this is the single most important thing to commun
 
 ## Step 4 — Draft the Update
 
-Use the appropriate template for the requested format. Translate technical and iGaming risks (e.g., RNG latency, transactional locking) into plain business language (e.g., "game stability verification" or "payment processing safety checks").
+Use the appropriate template for the requested format. Translate technical and domain-specific risks (e.g., database lock latency, API stability verification) into plain business language.
 
 ### Template A — Brief message (Slack / Teams)
 
@@ -157,10 +147,7 @@ The team will focus on [theme/goal] next Sprint, starting [date].
 
 Present the draft and ask: *"Does this capture the right message? Any adjustments before I finalise?"*
 
-Apply corrections. Once confirmed, offer to:
-- Post to a Teams/Slack channel (if an integration is available)
-- Create a Wiki page in ADO (`mcp__azure-devops__wiki_create_or_update_page`) for a running status log
-- Copy the final text to paste into email
+Apply corrections. Once confirmed, output the final text in a clean Markdown block for the user to copy-paste manually into their communication channel.
 
 ---
 

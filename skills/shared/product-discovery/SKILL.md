@@ -64,7 +64,7 @@ Verify which BABOK layer is defined and which are missing, displaying this table
 | Business Requirement | *Why* are we doing this? | ✅ / 🟡 / ⛔ |
 | Stakeholder Requirement | *Who* needs what? | ✅ / 🟡 / ⛔ |
 | Functional Requirement | *What* must the system do? | ✅ / 🟡 / ⛔ |
-| Non-functional Requirement | *How well* must it do it? | ✅ / 🟡 / Meier |
+| Non-functional Requirement | *How well* must it do it? | ✅ / 🟡 / ⛔ |
 | Transition Requirement | How do we *get from current to future state*? | ✅ / 🟡 / ⛔ |
 
 ### Step 3 — Gap Detection

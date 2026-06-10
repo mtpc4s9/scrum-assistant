@@ -3,12 +3,13 @@ name: step-10-refinement
 description: Orchestrates Step 10 - Product Backlog Refinement. Facilitates Three Amigos discussions, evaluates DoR readiness, and delegates oversized or ambiguous items to shared story splitting or US writing skills.
 ---
 
-### Step 10: Product Backlog Refinement (Orchestrator)
+# Step 10: Product Backlog Refinement (Orchestrator)
+
 This skill serves as the central cognitive router for Refinement. It does NOT generate final templates directly. Instead, it evaluates Product Backlog Items (PBIs) and intelligently delegates execution to specialized shared skills (Story Splitting or User Story Writer).
 
 --------------------------------------------------------------------------------
 
-#### 0. Backbone & Phase Context
+## 0. Backbone & Phase Context
 *   **Backbone Step:** Step 10 — Product Backlog Refinement (Ongoing)
 *   **Scrum Flow Phase:** Phase 1 — Sprint Loop
 *   **Primary Owner:** Product Owner (accountable); Developers collaborate.
@@ -17,7 +18,7 @@ This skill serves as the central cognitive router for Refinement. It does NOT ge
 
 --------------------------------------------------------------------------------
 
-#### 1. Intent Detection & Routing Logic
+## 1. Intent Detection & Routing Logic
 The Agent MUST detect intent and route to the appropriate validation or delegation mode:
 *   **Mode A (Readiness Audit):** 
     *   *Keywords:* "is this ready", "check dor", "đánh giá thẻ này", "thẻ này ready chưa".
@@ -31,7 +32,7 @@ The Agent MUST detect intent and route to the appropriate validation or delegati
 
 --------------------------------------------------------------------------------
 
-#### 2. Execution Guardrails
-1.  **No Duplicate Templates:** The Step 10 Agent MUST NOT attempt to format the final User Story or BDD scenarios itself. Always hand off to the `ba-zone-user-story-ac-writer` skill.
+## 2. Execution Guardrails
+1.  **No Duplicate Templates:** The Step 10 Agent MUST NOT attempt to format the final User Story or BDD scenarios itself. Always hand off to the [user-story-writing](../shared/user-story-writing/SKILL.md) skill.
 2.  **No Technical Slicing:** When directing a split, remind the user that splitting must deliver a vertical slice of value, not a technical layer (e.g., UI only or DB only).
 3.  **Continuous Alignment:** Once a shared skill returns a generated artifact, the Step 10 Agent resumes control, asking the Scrum Team: *"Does this refined item now meet our Definition of Ready for the upcoming Sprint?"*

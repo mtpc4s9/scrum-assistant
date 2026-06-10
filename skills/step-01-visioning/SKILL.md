@@ -1,11 +1,11 @@
 ---
 name: step-01-visioning
-description: Execute Step 1 - Visioning by verifying inputs, overlaying iGaming domain context, and generating product vision boards, elevator pitches, stakeholder maps, and C-level presentation decks.
+description: Execute Step 1 - Visioning by verifying inputs, optional domain context overlays (e.g. iGaming), and generating product vision boards, elevator pitches, stakeholder maps, and presentation decks.
 ---
 
 # Step 01: Visioning (Product Vision Creation)
 
-This skill controls the execution of the **Step 1 - Visioning** workflow of the Scrum Flow Backbone. The goal is to establish a shared, clear product vision and identify initial key stakeholders, aligned with iGaming domain realities.
+This skill controls the execution of the **Step 1 - Visioning** workflow of the Scrum Flow Backbone. The goal is to establish a shared, clear product vision and identify initial key stakeholders, adaptively aligned with project domain realities.
 
 ---
 
@@ -50,9 +50,12 @@ Upon activation, the assistant must load the input quality gate checklist from [
 
 ---
 
-## 2. Phase 2 — Domain Context Overlay
+## 2. Phase 2 — Domain Context Overlay (Optional)
 
-Once the quality gate is cleared, the assistant overlays the product details with relevant iGaming regulations and technical risks.
+Before proceeding, the assistant MUST check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
+
+*   **IF the domain is NOT iGaming/Lottery:** Skip this phase entirely and proceed directly to Phase 3.
+*   **IF the domain IS iGaming/Lottery:** Execute the following scan protocol:
 
 ### 2.1 Keyword-Scoped Reading Strategy
 To optimize token efficiency and maintain strict context focus, the assistant **MUST NOT** read the entire `igaming-context.md` file. Instead, follow this protocol:

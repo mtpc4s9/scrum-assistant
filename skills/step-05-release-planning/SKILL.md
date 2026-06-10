@@ -44,14 +44,18 @@ Upon activation, the assistant must load the input quality gate checklist from [
 
 ---
 
-## 2. Phase 2 — Mathematical Engine & Domain Overlay
+## 2. Phase 2 — Mathematical Engine & Domain Overlay (Optional Domain Scan)
 
 Once the quality gate is cleared, the assistant performs the forecasting calculations and overlays domain constraints.
 
-### 2.1 Keyword-Scoped Reading Strategy
-1.  **Extract Keywords:** Identify key domain terms from the backlog inputs (e.g., `Kambi`, `Pragmatic Play`, `Momo`, `USDT`, `Decree 06`, `Vietlott`).
-2.  **Scan iGaming Context:** Open [igaming-context.md](../../reference/igaming-context.md) and scan **only** the sections with headings matching the extracted keywords.
-3.  **Identify Regulatory Constraints:** Note compliance timelines (e.g., MoMo transaction limits or Decree 06 daily caps) that might affect release staging or require early sub-releases.
+### 2.1 Domain Scan (Optional)
+Check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
+
+*   **IF domain is NOT iGaming/Lottery:** Skip the domain scan and proceed directly to 2.2 Mathematical Forecasting Loop.
+*   **IF domain IS iGaming/Lottery:**
+    1.  **Extract Keywords:** Identify key domain terms from the backlog inputs (e.g., `Kambi`, `Pragmatic Play`, `Momo`, `USDT`, `Decree 06`, `Vietlott`).
+    2.  **Scan iGaming Context:** Open [igaming-context.md](../../reference/igaming-context.md) and scan **only** the sections with headings matching the extracted keywords.
+    3.  **Identify Regulatory Constraints:** Note compliance timelines (e.g., MoMo transaction limits or Decree 06 daily caps) that might affect release staging or require early sub-releases.
 
 ### 2.2 Mathematical Forecasting Loop
 The assistant **MUST** calculate the forecast based on the constraint type:

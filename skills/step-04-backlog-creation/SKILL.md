@@ -47,16 +47,20 @@ To prevent token bloat during active conversation, the theoretical guidelines fo
 1.  **User Story Mapping:** Refer to [references/user-story-mapping-guide.md](references/user-story-mapping-guide.md) to build the horizontal **Backbone** (Key Activities), define the **Walking Skeleton** (Epics), and slice them vertically.
 2.  **MRF & Roadmapping:** Refer to [references/mrf-and-roadmapping-guide.md](references/mrf-and-roadmapping-guide.md) to identify **Minimum Releasable Features (MRFs)** and structure releases.
 
-### 2.2 iGaming Context Overlay
-*   Scan [igaming-context.md](../../reference/igaming-context.md) using keywords matching the product domain (e.g., `sportsbook`, `Kambi`, `casino`, `Pragmatic`, `RTP`, `wallet`, `AML`, `KYC`, `Momo`).
-*   Inject mandatory compliance/integration Epics (e.g., "PAGCOR Geofencing Implementation", "RNG Certification Testing", "Unified Wallet Callback Latency Optimization").
+### 2.2 Domain Context Overlay (Optional)
+Check if the project is in the iGaming or Online Lottery domain. Ask the user: *"Is this project in the iGaming or Online Lottery domain? (yes/no)"* (or detect from project context).
+
+*   **IF domain is NOT iGaming/Lottery:** Skip this overlay and proceed to Phase 3.
+*   **IF domain IS iGaming/Lottery:**
+    *   Scan [igaming-context.md](../../reference/igaming-context.md) using keywords matching the product domain (e.g., `sportsbook`, `Kambi`, `casino`, `Pragmatic`, `RTP`, `wallet`, `AML`, `KYC`, `Momo`).
+    *   Inject mandatory compliance/integration Epics (e.g., "PAGCOR Geofencing Implementation", "RNG Certification Testing", "Unified Wallet Callback Latency Optimization").
 
 ---
 
 ## 3. Phase 3 — Output Generation & Self-Audit
 
 ### 3.1 Template Catalogue Presentation
-The assistant **MUST NOT** generate any deliverables automatically. Present the validated Product Goal and the iGaming context summary, then display the template catalogue:
+The assistant **MUST NOT** generate any deliverables automatically. Present the validated Product Goal and the domain context summary, then display the template catalogue:
 
 ```
 Inputs validated. I have structured the Story Map Backbone and MRF Release Line.
@@ -65,11 +69,12 @@ Please select which deliverable you would like to generate first:
 [A] High-Level Product Backlog  → (Ref: templates/high-level-product-backlog.md)
 [B] Product Roadmap             → (Ref: templates/product-roadmap.md)
 [C] Epic/Feature Tree           → (Ref: templates/epic-feature-tree.md)
+[D] User Story Mapping Board    → (Ref: templates/story-mapping-board.md)
 ```
 
 ### 3.2 Output Execution & Audit Rules
 Once the user selects an output:
-1.  Load the target template file from the `templates/` folder.
+1.  Load the target template file from the `templates/` folder (e.g., [templates/high-level-product-backlog.md](templates/high-level-product-backlog.md) or [templates/story-mapping-board.md](templates/story-mapping-board.md)).
 2.  **Quality Gate Audit Rule:** After drafting the High-Level Product Backlog (Template A), the assistant **MUST** read [checklists/deep-quality-gate.md](checklists/deep-quality-gate.md) and perform a silent self-audit against the **DEEP** criteria (Detailed appropriately, Emergent, Estimated, Prioritized).
     *   *Remediation:* If any DEEP criterion fails (e.g., items at the bottom are too detailed, no estimates exist, or ordering does not account for iGaming risks), the assistant **MUST** adjust the draft internally before presenting the clean output to the user.
 3.  **Story Splitting Rule:** If an Epic or Feature generated during this step is too large to fit in a Sprint and needs decomposition, the assistant **MUST** invoke the shared story-splitting skill at [../shared/story-splitting/SKILL.md](../shared/story-splitting/SKILL.md).
