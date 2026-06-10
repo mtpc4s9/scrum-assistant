@@ -124,7 +124,14 @@ scrum-assistant/
     │   └── templates/
     │       └── sprint-review-slide-deck.md # Sprint review slides & notes cache
     ├── step-12-sprint-retrospective/
-    │   └── SKILL.md                # Sprint Retrospective (Backbone Step 12)
+    │   ├── SKILL.md                # Sprint Retrospective Orchestrator (Backbone Step 12)
+    │   ├── checklists/
+    │   │   └── retrospective-prework-checklist.md # Prework check logic
+    │   ├── references/
+    │   │   └── retrospective-facilitation-guide.md # Facilitation & coaching guide
+    │   └── templates/
+    │       ├── insight-backlog.md  # Insight backlog & triage logic
+    │       └── sprint-retrospective-slide-deck.md # Visual slide deck template
     │
     ├── audit-user-story/
     │   └── SKILL.md                # INVEST quality checks & story audits
